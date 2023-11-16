@@ -1,6 +1,7 @@
 body {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: lightblue;
+    position: relative;
 }
 
 h1 {
@@ -8,7 +9,7 @@ h1 {
     font-weight: 900;
     font-size: 60px;
     color: white;
-    left: 35%;
+    left: 40%;
 }
 
 h2 {
@@ -43,14 +44,7 @@ main {
     gap: 15px;
 }
 
-.menuZone {
-    justify-content: space-between;
-    flex-direction: row;
-    display: flex;
-    width: 200px;
-}
-
-.menuZone svg {
+nav svg {
     cursor: pointer;
 }
 
@@ -66,6 +60,7 @@ main {
     display: flex;
     height: 770px;
     width: 40%;
+    margin-left: 20px;
 }
 
 .dataMenu-card {
@@ -80,6 +75,7 @@ main {
     font-size: 16px;
     width: 600px;
     margin: 10px;
+    margin-left: 100px;
 }
 
 .dataMenu-form {
@@ -91,7 +87,7 @@ main {
 }
 
 .dataMenu-form-buttons {
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
     display: flex;
@@ -162,27 +158,35 @@ form input {
     margin-bottom: 10px;
     text-align: center;
     margin-top: 5px;
-    font-size: 30px;
+    font-size: 28px;
     outline: none;
     width: 380px;
-    height: 40px;
+    height: 35px;
 }
 
 input:focus {
     border: 5px solid #06f;
 }
 
-.writter-section
-{
+.writter-section {
     flex-direction: column;
     display: flex;
 }
 
-.writter-section label
-{
+.writter-section label {
     color: whitesmoke;
     text-indent: 10px;
     font-size: 30px;
+}
+
+.help {
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+}
+
+.help svg {
+    cursor: pointer;
 }
 
 .save {
@@ -224,7 +228,7 @@ button:hover::before {
     left: 0;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1750px) {
 
     h1 {
         position: static;
@@ -237,6 +241,10 @@ button:hover::before {
 
     .dataMenu-info {
         width: 100%;
+        margin-left: -50px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0;
 
     }
 
@@ -245,17 +253,53 @@ button:hover::before {
     }
 
     form {
-
         width: 700px;
-
     }
 
     form input {
-
         width: 300px;
-        height: 80px;
-        font-size: 40px;
+        height: 30px;
+    }
+
+    .help {
+        left: 10px;
+        bottom: 10px;
+        z-index: 33;
     }
 
 
+    @media only screen and (max-width: 800px) {
+
+        h1,
+        h2 {
+            display: none;
+        }
+
+        .dataMenu-card {
+            width: 400px;
+            height: 100px;
+            font-size: 13px;
+        }
+
+        .dataMenu-card-buttons button {
+            width: 35px;
+            height: 35px;
+            border-radius: 5px;
+        }
+
+        form input {
+            width: 200px;
+            height: 30px;
+            font-size: 30px;
+        }
+
+        .writter-section label {
+            font-size: 20px;
+        }
+
+        .dataMenu-card-data {
+            margin-top: 20px;
+            font-size: 11px;
+        }
+    }
 }
