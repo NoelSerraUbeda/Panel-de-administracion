@@ -1,5 +1,5 @@
 document.getElementById('deleteData').addEventListener('click', function () {
-    // Obtener referencias a los elementos del formulario
+    // Obtener elementos
     var nombreInput = document.getElementById('nombreInput');
     var emailInput = document.getElementById('emailInput');
     var dato1Input = document.getElementById('dato1Input');
@@ -7,7 +7,7 @@ document.getElementById('deleteData').addEventListener('click', function () {
     var contrasenaInput = document.getElementById('contrasenaInput');
     var repetirContrasenaInput = document.getElementById('repetirContrasenaInput');
 
-    // Limpiar los valores de los campos del formulario
+    // Limpiar
     nombreInput.value = '';
     emailInput.value = '';
     dato1Input.value = '';
@@ -15,6 +15,7 @@ document.getElementById('deleteData').addEventListener('click', function () {
     contrasenaInput.value = '';
     repetirContrasenaInput.value = '';
 });
+
 // Obtener botones
 const deleteButtons = document.querySelectorAll('.dataMenu-card-buttons button:first-child');
 
