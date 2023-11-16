@@ -27,45 +27,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: aquamarine;
+            background-color: lightblue;
             font-family: monospace;
         }
 
-        h1
-        {
-            font-size: 30px;
+        h1 {
+            position: absolute;
+            font-weight: 900;
+            font-size: 60px;
+            color: white;
+            left: 35%;
         }
 
         h2 {
-            color: white;
             font-size: 30px;
+            color: white;
         }
 
         header {
-            border: 10px solid orange;
+            border: 10px solid #06f;
             border-radius: 15px;
             margin-bottom: 5px;
         }
 
         main {
-            border: 10px solid orange;
+
             border-radius: 15px;
         }
 
         .topnav {
-            background-color: red;
-            display: flex;
-            flex-direction: row;
+            background-color: rgb(44, 44, 207);
             justify-content: space-between;
+            flex-direction: row;
             align-items: center;
-            padding-left: 50px;
             padding-right: 15px;
+            padding-left: 50px;
+            display: flex;
+        }
+
+        .users {
+            flex-direction: row;
+            display: flex;
+            width: 300px;
+            gap: 15px;
         }
 
         .menuZone {
-            display: flex;
-            flex-direction: row;
             justify-content: space-between;
+            flex-direction: row;
+            display: flex;
             width: 200px;
         }
 
@@ -74,115 +84,203 @@
         }
 
         .dataMenu {
-            display: flex;
             flex-direction: row;
+            display: flex;
         }
 
         .dataMenu-info {
-            background-color: green;
-            display: flex;
+            justify-content: start;
             flex-direction: column;
             align-items: center;
-            justify-content: start;
-            border: 3px solid black;
-            width: 40%;
+            display: flex;
             height: 770px;
+            width: 40%;
         }
 
         .dataMenu-card {
-            background-color: beige;
-            border: 2px solid black;
+            box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+            background-image: linear-gradient(to bottom, #fff, #f8eedb);
+            background-color: transparent;
+            border: 5px solid #06f;
+            border-right-width: 8px;
+            border-top-width: 10px;
             border-radius: 15px;
+            text-indent: 20px;
+            font-size: 16px;
             width: 600px;
             margin: 10px;
-            text-indent: 10px;
         }
 
         .dataMenu-form {
-            background-color: firebrick;
-            display: flex;
+
             flex-direction: column;
-            border: 3px solid black;
-            width: 60%;
+            position: relative;
+            display: flex;
             height: 770px;
+            width: 60%;
         }
 
         .dataMenu-form-buttons {
-            background-color: blue;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
             justify-content: flex-end;
-            gap: 25px;
+            align-items: center;
+            flex-direction: row;
+            display: flex;
             height: 80px;
+            gap: 25px;
         }
 
         .dataMenu-card-buttons {
 
-            display: flex;
             flex-direction: row-reverse;
             border-radius: 15px;
+            display: flex;
             height: 0px;
-            margin-top: 20px;
-            margin-right: -10px;
+            gap: 5px;
         }
 
         .dataMenu-card-buttons button {
-            border: none;
-            background: none;
+            box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+            background-color: #06f;
+            justify-content: center;
+            border-radius: 15px;
+            align-items: center;
+            margin-right: 10px;
+            margin-top: 5px;
             cursor: pointer;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 15px;
-            width: 60px;
+            border: none;
+            height: 50px;
+            width: 50px;
         }
 
         .dataMenu-form-buttons button {
-            width: 60px;
-            height: 50px;
-            margin-right: 20px;
+            box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+            background-color: #06f;
             border-radius: 10px;
-            border: none;
+            margin-right: 20px;
             cursor: pointer;
+            border: none;
+            height: 60px;
+            width: 70px;
         }
 
-        .dataMenu-form-buttons button:hover {
-            background-color: #cbd3d8;
-        }
 
         .dataMenu-form-writter {
-            display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 90px;
+            margin-top: 50px;
+            display: flex;
         }
 
         form {
-            background-color: lime;
-            display: flex;
-            flex-wrap: wrap;
+
+            box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+            background: linear-gradient(to left, #007BFF, #00BFFF);
+            border-right-width: 8px;
+            border: 5px solid #06f;
             justify-content: center;
-            align-items: center;
+            border-top-width: 30px;
             border-radius: 15px;
-            border: 10px solid green;
+            align-items: center;
+            flex-wrap: wrap;
+            display: flex;
+            height: 450px;
             width: 900px;
             gap: 20px;
-            height: 450px;
         }
 
         form input {
+            background-image: linear-gradient(to bottom, #fff, #f8eedb);
+            border-radius: 15px;
+            text-align: center;
+            font-size: 40px;
+            outline: none;
+            border: none;
             width: 400px;
             height: 60px;
-            font-size: 40px;
-            border-radius: 15px;
-            border: none;
-            text-align: center;
-            outline: none;
         }
 
         form input:focus {
-            background-color: rgb(245, 243, 241);
+            background-color: #06f;
+            color: white;
+        }
+
+        .save {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .save button {
+            box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+            background-color: #06f;
+            border-radius: 15px;
+            cursor: pointer;
+            border: none;
+            height: 80px;
+            width: 80px;
+        }
+
+        button {
+
+            transition: background-color 0.3s ease-in-out;
+            background-color: #3498db;
+            position: relative;
+            overflow: hidden;
+            border: none;
+            z-index: 1;
+        }
+
+        button::before {
+            transition: left 0.3s ease-in-out;
+            background-color: steelblue;
+            position: absolute;
+            height: 100%;
+            content: '';
+            left: -100%;
+            width: 100%;
+            z-index: -1;
+            top: 0;
+        }
+
+        button:hover::before {
+            left: 0;
+        }
+
+        @media only screen and (max-width: 1200px) {
+
+            h1 {
+                position: static;
+                font-size: 30px;
+            }
+
+            .dataMenu {
+                flex-direction: column;
+            }
+
+            .dataMenu-info {
+                width: 100%;
+
+            }
+
+            .dataMenu-form {
+                width: 100%;
+            }
+
+            form {
+
+                width: 700px;
+
+            }
+
+            form input {
+
+                width: 300px;
+                height: 80px;
+                font-size: 40px;
+            }
+
+
         }
     </style>
 </head>
@@ -191,6 +289,11 @@
     <header>
         <div class="topnav">
             <div class="users">
+                <svg width="80px" fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <title>laravel</title>
+                    <path
+                        d="M21.7 6.53C21.71 6.55 21.71 6.58 21.71 6.61V10.9C21.71 11 21.65 11.12 21.56 11.17L17.95 13.25V17.36C17.95 17.47 17.9 17.57 17.8 17.63L10.28 21.96C10.26 21.97 10.24 22 10.22 22L10.2 22C10.15 22 10.09 22 10.04 22C10.03 22 10 22 10 22C10 22 10 21.97 9.96 21.96L2.44 17.63C2.35 17.58 2.29 17.47 2.29 17.36V4.5C2.29 4.45 2.29 4.42 2.3 4.4C2.3 4.39 2.31 4.38 2.31 4.37C2.31 4.35 2.32 4.34 2.33 4.32C2.33 4.31 2.34 4.3 2.35 4.29C2.36 4.28 2.37 4.27 2.38 4.26C2.39 4.25 2.4 4.24 2.41 4.23C2.42 4.22 2.43 4.21 2.44 4.21L6.2 2.04C6.3 2 6.42 2 6.5 2.04L10.28 4.21H10.28C10.29 4.22 10.3 4.22 10.31 4.23C10.32 4.24 10.33 4.25 10.34 4.26C10.35 4.27 10.36 4.28 10.37 4.29C10.38 4.3 10.39 4.31 10.39 4.32C10.4 4.34 10.41 4.35 10.41 4.37C10.41 4.38 10.42 4.39 10.42 4.4C10.43 4.43 10.43 4.45 10.43 4.5V12.5L13.57 10.72V6.61C13.57 6.58 13.57 6.55 13.58 6.53L13.59 6.5C13.59 6.5 13.6 6.47 13.61 6.45C13.61 6.44 13.62 6.43 13.63 6.42C13.64 6.41 13.65 6.4 13.66 6.39C13.67 6.38 13.68 6.37 13.69 6.36C13.7 6.35 13.71 6.34 13.72 6.34L17.5 4.17C17.58 4.11 17.7 4.11 17.8 4.17L21.56 6.34C21.57 6.34 21.58 6.35 21.59 6.36L21.62 6.39C21.63 6.4 21.64 6.41 21.65 6.42C21.66 6.43 21.66 6.44 21.67 6.45C21.68 6.47 21.68 6.5 21.69 6.5C21.7 6.5 21.7 6.5 21.7 6.53M21.09 10.72V7.15L17.95 8.95V12.5L21.09 10.72M17.33 17.18V13.6L10.43 17.54V21.15L17.33 17.18M2.91 5V17.18L9.81 21.15V17.54L6.21 15.5L6.2 15.5L6.2 15.5C6.19 15.5 6.18 15.5 6.17 15.47C6.16 15.47 6.15 15.46 6.14 15.45V15.45C6.13 15.44 6.12 15.43 6.11 15.42C6.1 15.41 6.1 15.4 6.09 15.39V15.39C6.08 15.37 6.08 15.36 6.07 15.35C6.07 15.33 6.06 15.32 6.06 15.31C6.05 15.3 6.05 15.28 6.05 15.27C6.05 15.25 6.05 15.24 6.05 15.23V6.82L2.91 5M6.36 2.68L3.23 4.5L6.36 6.28L9.5 4.5L6.36 2.68M9.81 12.88V5L6.67 6.82V14.69L9.81 12.88M17.64 4.8L14.5 6.61L17.64 8.41L20.77 6.61L17.64 4.8M17.33 8.95L14.19 7.15V10.72L17.33 12.5V8.95M10.12 17L17 13.06L13.88 11.26L7 15.23L10.12 17Z" />
+                </svg>
                 <h2>Usuarios</h2>
             </div>
             <h1>Panel de control</h1>
@@ -199,7 +302,7 @@
                 <nav>
                     <svg width="80px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <title>menu</title>
-                        <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+                        <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" fill="white" />
                     </svg>
                 </nav>
             </div>
@@ -209,109 +312,104 @@
         <div class="dataMenu">
             <div class="dataMenu-info">
                 <div class="dataMenu-card">
-
                     <div class="dataMenu-card-buttons">
-                        <button><svg width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <title>alpha-x-circle-outline</title>
+                        <button><svg width="40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <title>Delete</title>
                                 <path
                                     d="M9,7H11L12,9.5L13,7H15L13,12L15,17H13L12,14.5L11,17H9L11,12L9,7M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z"
-                                    fill="red" />
+                                    fill="white" />
                             </svg></button>
                         <button><svg width="80px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <title>pencil</title>
                                 <path
                                     d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z"
-                                    fill="green" />
+                                    fill="white" />
                             </svg></button>
                     </div>
                     <div class="dataMenu-card-data">
-                        <h3>DATA:</h3>
-                        <h3>DATA:</h3>
+                        <h3>NOMBRE:<span>Pedro</span></h3>
+                        <h3>EMAIL:<span>PedroCorreo@gmail.com</span></h3>
                         <h3>DATA:</h3>
                     </div>
                 </div>
 
                 <div class="dataMenu-card">
                     <div class="dataMenu-card-buttons">
-                        <button><svg width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <title>alpha-x-circle-outline</title>
+                        <button><svg width="40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <title>Delete</title>
                                 <path
                                     d="M9,7H11L12,9.5L13,7H15L13,12L15,17H13L12,14.5L11,17H9L11,12L9,7M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z"
-                                    fill="red" />
+                                    fill="white" />
                             </svg></button>
                         <button><svg width="80px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <title>pencil</title>
                                 <path
                                     d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z"
-                                    fill="green" />
+                                    fill="white" />
                             </svg></button>
                     </div>
                     <div class="dataMenu-card-data">
-                        <h3>DATA:</h3>
-                        <h3>DATA:</h3>
+                        <h3>NOMBRE:<span>Carlos</span></h3>
+                        <h3>EMAIL:<span>Charles_MorenoCorreo@gmail.com</span></h3>
                         <h3>DATA:</h3>
                     </div>
                 </div>
 
                 <div class="dataMenu-card">
                     <div class="dataMenu-card-buttons">
-                        <button><svg width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <title>alpha-x-circle-outline</title>
+                        <button><svg width="40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <title>Delete</title>
                                 <path
                                     d="M9,7H11L12,9.5L13,7H15L13,12L15,17H13L12,14.5L11,17H9L11,12L9,7M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z"
-                                    fill="red" />
+                                    fill="white" />
                             </svg></button>
                         <button><svg width="80px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <title>pencil</title>
                                 <path
                                     d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z"
-                                    fill="green" />
+                                    fill="white" />
                             </svg></button>
                     </div>
                     <div class="dataMenu-card-data">
-                        <h3>DATA:</h3>
-                        <h3>DATA:</h3>
+                        <h3>NOMBRE:<span>Maria</span></h3>
+                        <h3>EMAIL:<span>MariaTieneCorreo@gmail.com</span></h3>
                         <h3>DATA:</h3>
                     </div>
                 </div>
 
                 <div class="dataMenu-card">
                     <div class="dataMenu-card-buttons">
-                        <button><svg width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <title>alpha-x-circle-outline</title>
+                        <button><svg width="40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <title>Delete</title>
                                 <path
                                     d="M9,7H11L12,9.5L13,7H15L13,12L15,17H13L12,14.5L11,17H9L11,12L9,7M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z"
-                                    fill="red" />
+                                    fill="white" />
                             </svg></button>
                         <button><svg width="80px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <title>pencil</title>
                                 <path
                                     d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z"
-                                    fill="green" />
+                                    fill="white" />
                             </svg></button>
                     </div>
                     <div class="dataMenu-card-data">
-                        <h3>DATA:</h3>
-                        <h3>DATA:</h3>
+                        <h3>NOMBRE:Jorge Nitales</h3>
+                        <h3>EMAIL:FunnyMail@gmail.com</h3>
                         <h3>DATA:</h3>
                     </div>
                 </div>
             </div>
             <div class="dataMenu-form">
                 <div class="dataMenu-form-buttons">
-                    <button><svg width="50px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <title>filter</title>
-                            <path
+                    <button><svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <title>Filter-Data</title>
+                            <path fill="white"
                                 d="M14,12V19.88C14.04,20.18 13.94,20.5 13.71,20.71C13.32,21.1 12.69,21.1 12.3,20.71L10.29,18.7C10.06,18.47 9.96,18.16 10,17.87V12H9.97L4.21,4.62C3.87,4.19 3.95,3.56 4.38,3.22C4.57,3.08 4.78,3 5,3V3H19V3C19.22,3 19.43,3.08 19.62,3.22C20.05,3.56 20.13,4.19 19.79,4.62L14.03,12H14Z" />
                         </svg></button>
-                    <button><svg width="50px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <title>content-save-cog-outline</title>
-                            <path
-                                d="M11.1 19C11.2 19.7 11.4 20.4 11.7 21H5C3.9 21 3 20.1 3 19V5C3 3.9 3.9 3 5 3H17L21 7V11.7C20.4 11.4 19.7 11.2 19 11.1V7.8L16.2 5H5V19H11.1M12 12C10.3 12 9 13.3 9 15C9 16.3 9.8 17.4 11 17.8C11.1 15.6 12.1 13.7 13.7 12.5C13.2 12.2 12.6 12 12 12M15 10V6H6V10H15M22.8 19.6L21.8 21.3C21.7 21.4 21.6 21.4 21.5 21.4L20.3 21C20 21.2 19.8 21.3 19.5 21.5L19.3 22.8C19.3 22.9 19.2 23 19.1 23H17.1C17 23 16.9 22.9 16.8 22.8L16.6 21.5C16.3 21.4 16 21.2 15.8 21L14.6 21.5C14.5 21.5 14.4 21.5 14.3 21.4L13.3 19.7C13.2 19.6 13.3 19.5 13.4 19.4L14.5 18.6V17.6L13.4 16.8C13.3 16.7 13.3 16.6 13.3 16.5L14.3 14.8C14.4 14.7 14.5 14.7 14.6 14.7L15.8 15.2C16.1 15 16.3 14.9 16.6 14.7L16.8 13.4C16.8 13.3 16.9 13.2 17.1 13.2H19.1C19.2 13.2 19.3 13.3 19.3 13.4L19.5 14.7C19.8 14.8 20.1 15 20.4 15.2L21.6 14.7C21.7 14.7 21.9 14.7 21.9 14.8L22.9 16.5C23 16.6 22.9 16.7 22.8 16.8L21.7 17.6V18.6L22.8 19.4C22.9 19.4 22.9 19.5 22.8 19.6M19.5 18C19.5 17.2 18.8 16.5 18 16.5S16.5 17.2 16.5 18 17.2 19.5 18 19.5C18.8 19.5 19.5 18.8 19.5 18Z" />
-                        </svg></button>
-                    <button><svg width="50px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <title>eraser</title>
-                            <path
+
+                    <button><svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <title>Delete-Data</title>
+                            <path fill="white"
                                 d="M16.24,3.56L21.19,8.5C21.97,9.29 21.97,10.55 21.19,11.34L12,20.53C10.44,22.09 7.91,22.09 6.34,20.53L2.81,17C2.03,16.21 2.03,14.95 2.81,14.16L13.41,3.56C14.2,2.78 15.46,2.78 16.24,3.56M4.22,15.58L7.76,19.11C8.54,19.9 9.8,19.9 10.59,19.11L14.12,15.58L9.17,10.63L4.22,15.58Z" />
                         </svg></button>
                 </div>
@@ -324,11 +422,31 @@
                         <input type="password" placeholder="Contraseña">
                         <input type="password" placeholder="Repetir Contraseña">
                     </form>
+                    <div class="save">
+                        <button><svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <title>Save-Data</title>
+                                <path fill="white"
+                                    d="M11.1 19C11.2 19.7 11.4 20.4 11.7 21H5C3.9 21 3 20.1 3 19V5C3 3.9 3.9 3 5 3H17L21 7V11.7C20.4 11.4 19.7 11.2 19 11.1V7.8L16.2 5H5V19H11.1M12 12C10.3 12 9 13.3 9 15C9 16.3 9.8 17.4 11 17.8C11.1 15.6 12.1 13.7 13.7 12.5C13.2 12.2 12.6 12 12 12M15 10V6H6V10H15M22.8 19.6L21.8 21.3C21.7 21.4 21.6 21.4 21.5 21.4L20.3 21C20 21.2 19.8 21.3 19.5 21.5L19.3 22.8C19.3 22.9 19.2 23 19.1 23H17.1C17 23 16.9 22.9 16.8 22.8L16.6 21.5C16.3 21.4 16 21.2 15.8 21L14.6 21.5C14.5 21.5 14.4 21.5 14.3 21.4L13.3 19.7C13.2 19.6 13.3 19.5 13.4 19.4L14.5 18.6V17.6L13.4 16.8C13.3 16.7 13.3 16.6 13.3 16.5L14.3 14.8C14.4 14.7 14.5 14.7 14.6 14.7L15.8 15.2C16.1 15 16.3 14.9 16.6 14.7L16.8 13.4C16.8 13.3 16.9 13.2 17.1 13.2H19.1C19.2 13.2 19.3 13.3 19.3 13.4L19.5 14.7C19.8 14.8 20.1 15 20.4 15.2L21.6 14.7C21.7 14.7 21.9 14.7 21.9 14.8L22.9 16.5C23 16.6 22.9 16.7 22.8 16.8L21.7 17.6V18.6L22.8 19.4C22.9 19.4 22.9 19.5 22.8 19.6M19.5 18C19.5 17.2 18.8 16.5 18 16.5S16.5 17.2 16.5 18 17.2 19.5 18 19.5C18.8 19.5 19.5 18.8 19.5 18Z" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
+    <script>
+        // Obtener botones
+        const deleteButtons = document.querySelectorAll('.dataMenu-card-buttons button:first-child');
 
+        // Event listener
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const card = button.closest('.dataMenu-card');
+                card.remove();
+            });
+        });
+
+    </script>
 </body>
 
 </html>
