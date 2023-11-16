@@ -1,0 +1,255 @@
+body {
+    background-color: lightblue;
+    font-family: monospace;
+}
+
+h1 {
+    position: absolute;
+    font-weight: 900;
+    font-size: 60px;
+    color: white;
+    left: 35%;
+}
+
+h2 {
+    font-size: 30px;
+    color: white;
+}
+
+header {
+    border: 10px solid #06f;
+    border-radius: 15px;
+    margin-bottom: 5px;
+}
+
+main {
+
+    border-radius: 15px;
+}
+
+.topnav {
+    background-color: rgb(44, 44, 207);
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 15px;
+    padding-left: 50px;
+    display: flex;
+}
+
+.users {
+    flex-direction: row;
+    display: flex;
+    width: 300px;
+    gap: 15px;
+}
+
+.menuZone {
+    justify-content: space-between;
+    flex-direction: row;
+    display: flex;
+    width: 200px;
+}
+
+.menuZone svg {
+    cursor: pointer;
+}
+
+.dataMenu {
+    flex-direction: row;
+    display: flex;
+}
+
+.dataMenu-info {
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    height: 770px;
+    width: 40%;
+}
+
+.dataMenu-card {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    background-image: linear-gradient(to bottom, #fff, #f8eedb);
+    background-color: transparent;
+    border: 5px solid #06f;
+    border-right-width: 8px;
+    border-top-width: 10px;
+    border-radius: 15px;
+    text-indent: 20px;
+    font-size: 16px;
+    width: 600px;
+    margin: 10px;
+}
+
+.dataMenu-form {
+
+    flex-direction: column;
+    position: relative;
+    display: flex;
+    height: 770px;
+    width: 60%;
+}
+
+.dataMenu-form-buttons {
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    height: 80px;
+    gap: 25px;
+}
+
+.dataMenu-card-buttons {
+
+    flex-direction: row-reverse;
+    border-radius: 15px;
+    display: flex;
+    height: 0px;
+    gap: 5px;
+}
+
+.dataMenu-card-buttons button {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    background-color: #06f;
+    justify-content: center;
+    border-radius: 15px;
+    align-items: center;
+    margin-right: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    display: flex;
+    border: none;
+    height: 50px;
+    width: 50px;
+}
+
+.dataMenu-form-buttons button {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    background-color: #06f;
+    border-radius: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+    border: none;
+    height: 60px;
+    width: 70px;
+}
+
+
+.dataMenu-form-writter {
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    display: flex;
+}
+
+form {
+
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    background: linear-gradient(to left, #007BFF, #00BFFF);
+    border-right-width: 8px;
+    border: 5px solid #06f;
+    justify-content: center;
+    border-top-width: 30px;
+    border-radius: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+    height: 450px;
+    width: 900px;
+    gap: 20px;
+}
+
+form input {
+    background-image: linear-gradient(to bottom, #fff, #f8eedb);
+    border: 5px solid #f8eedb;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 30px;
+    outline: none;
+    width: 380px;
+    height: 40px;
+}
+
+input:focus {
+    border: 5px solid #06f;
+}
+
+.save {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.save button {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    background-color: #06f;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+    height: 80px;
+    width: 80px;
+}
+
+button {
+
+    transition: background-color 0.3s ease-in-out;
+    background-color: #3498db;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    z-index: 1;
+}
+
+button::before {
+    transition: left 0.3s ease-in-out;
+    background-color: steelblue;
+    position: absolute;
+    height: 100%;
+    content: '';
+    left: -100%;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+}
+
+button:hover::before {
+    left: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    h1 {
+        position: static;
+        font-size: 30px;
+    }
+
+    .dataMenu {
+        flex-direction: column;
+    }
+
+    .dataMenu-info {
+        width: 100%;
+
+    }
+
+    .dataMenu-form {
+        width: 100%;
+    }
+
+    form {
+
+        width: 700px;
+
+    }
+
+    form input {
+
+        width: 300px;
+        height: 80px;
+        font-size: 40px;
+    }
+
+
+}
