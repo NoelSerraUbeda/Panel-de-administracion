@@ -45,8 +45,8 @@ header {
 
 nav svg {
     cursor: pointer;
-    transition: transform 0.3s ease, color 0.3s ease; 
-    fill: white; 
+    transition: transform 0.3s ease, color 0.3s ease;
+    fill: white;
 }
 
 
@@ -73,7 +73,7 @@ main {
     margin-top: 10px;
     overflow: scroll;
     display: flex;
-    height: 770px;
+    height: 800px;
     width: 40%;
 }
 
@@ -119,8 +119,8 @@ main {
     width: 50px;
 }
 
-.dataMenu-card-buttons button:hover  {
-    transition: transform 0.3s ease, color 0.3s ease; 
+.dataMenu-card-buttons button:hover {
+    transition: transform 0.3s ease, color 0.3s ease;
     transform: scale(1.05);
 }
 
@@ -128,7 +128,7 @@ main {
     flex-direction: column;
     position: relative;
     display: flex;
-    height: 770px;
+    height: 100%;
     width: 60%;
 }
 
@@ -150,7 +150,7 @@ main {
 }
 
 .dataMenu-form-buttons button:hover {
-    transition: transform 0.3s ease, color 0.3s ease; 
+    transition: transform 0.3s ease, color 0.3s ease;
     transform: scale(1.05);
 }
 
@@ -239,7 +239,7 @@ button:hover::before {
 
 .save {
     position: absolute;
-    bottom: 20px;
+    bottom: -100px;
     right: 20px;
 }
 
@@ -249,7 +249,7 @@ button:hover::before {
 }
 
 .save button:hover {
-    transition: transform 0.3s ease, color 0.3s ease; 
+    transition: transform 0.3s ease, color 0.3s ease;
     transform: scale(1.05);
 }
 
@@ -308,6 +308,10 @@ button:hover::before {
         text-indent: 0;
     }
 
+    main {
+        margin-bottom: 150px;
+    }
+
     @media only screen and (max-width: 1280px) {
 
         .dataMenu-info {
@@ -317,6 +321,10 @@ button:hover::before {
         .dataMenu-card {
             font-size: 15px;
             width: 80%;
+        }
+
+        .save {
+            bottom: -110px;
         }
 
         @media only screen and (max-width: 769px) {
@@ -375,10 +383,11 @@ button:hover::before {
             .save button {
                 height: 60px;
                 width: 60px;
+                background-color: #06f;
             }
 
             main {
-                margin-bottom: 80px;
+                margin-bottom: 90px;
             }
         }
     }
