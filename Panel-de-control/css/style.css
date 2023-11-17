@@ -3,6 +3,7 @@ body {
     background-color: lightblue;
     position: relative;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 /* Encabezado */
@@ -44,6 +45,13 @@ header {
 
 nav svg {
     cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease; 
+    fill: white; 
+}
+
+
+nav svg:hover {
+    transform: scale(1.1);
 }
 
 /* Contenido principal */
@@ -111,6 +119,11 @@ main {
     width: 50px;
 }
 
+.dataMenu-card-buttons button:hover  {
+    transition: transform 0.3s ease, color 0.3s ease; 
+    transform: scale(1.05);
+}
+
 .dataMenu-form {
     flex-direction: column;
     position: relative;
@@ -136,6 +149,11 @@ main {
     width: 70px;
 }
 
+.dataMenu-form-buttons button:hover {
+    transition: transform 0.3s ease, color 0.3s ease; 
+    transform: scale(1.05);
+}
+
 .dataMenu-form-writter {
     justify-content: center;
     align-items: center;
@@ -148,13 +166,14 @@ form {
     border-right-width: 8px;
     border: 5px solid #06f;
     justify-content: center;
-    border-top-width: 30px;
+    border-top-width: 25px;
+    padding-bottom: 20px;
     border-radius: 15px;
     align-items: center;
+    padding-top: 10px;
     margin-top: 5px;
     flex-wrap: wrap;
     display: flex;
-    padding: 5px;
     width: 850px;
     gap: 15px;
 }
@@ -163,7 +182,6 @@ form input {
     background-image: linear-gradient(to bottom, #fff, #f8eedb);
     border: 5px solid #f8eedb;
     border-radius: 15px;
-    margin-bottom: 10px;
     text-align: center;
     margin-top: 5px;
     font-size: 28px;
@@ -182,6 +200,7 @@ input:focus {
 }
 
 .writter-section label {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     color: whitesmoke;
     font-weight: bolder;
     text-indent: 10px;
@@ -229,7 +248,16 @@ button:hover::before {
     width: 80px;
 }
 
+.save button:hover {
+    transition: transform 0.3s ease, color 0.3s ease; 
+    transform: scale(1.05);
+}
+
 @media only screen and (max-width: 1550px) {
+
+    body {
+        overflow-y: visible;
+    }
 
     h1,
     h2 {
