@@ -233,6 +233,14 @@ button::before {
     top: 0;
 }
 
+.delete::before {
+    background-color: rgb(214, 43, 43);
+}
+
+.edit::before {
+    background-color: rgb(49, 214, 43);
+}
+
 button:hover::before {
     left: 0;
 }
