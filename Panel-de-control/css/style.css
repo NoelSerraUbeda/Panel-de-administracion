@@ -22,8 +22,9 @@ h2 {
 }
 
 header {
-    border: 10px solid #06f;
-    border-radius: 15px;
+    border: 8px solid #06f;
+    border-radius: 10px;    
+    margin: 5px;
 }
 
 .topnav {
@@ -73,7 +74,7 @@ main {
     margin-top: 10px;
     overflow: scroll;
     display: flex;
-    height: 800px;
+    height: 810px;
     width: 40%;
 }
 
