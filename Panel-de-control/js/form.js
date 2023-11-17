@@ -1,21 +1,41 @@
 function generateCard() {
-    // Valores del formulario
+    // Valores
     var nombre = document.getElementById('nombreInput').value;
     var email = document.getElementById('emailInput').value;
     var dato1 = document.getElementById('dato1Input').value;
     var dato2 = document.getElementById('dato2Input').value;
+    var pass = document.getElementById('contrasenaInput').value;
+    var pass2 = document.getElementById('repetirContrasenaInput').value;
 
-    // Verificar si algún campo está en blanco o solo con espacios
-    if (nombre === '' || email === '' || dato1 === '' || dato2 === '') {
-        alert('Por favor, complete todos los campos obligatorios.');
-        return; // Evitar la generación de tarjeta si hay campos vacíos
+    var mensajePopup = document.getElementById('popup-message');
+
+    // Verificar campos
+    if (nombre === '' || email === '' || dato1 === '' || dato2 === '' || pass === '') {
+        mensajePopup.textContent = "Todos los campos deben ser completados.";
+        mostrarMensajeEmergente();
+        return;
+    }
+
+    // Contraseñas diferentes
+    if (pass !== pass2) {
+        mensajePopup.textContent = "Las contraseñas no coinciden. Por favor, inténtelo de nuevo.";
+        mostrarMensajeEmergente();
+        return;
+    }
+
+    function mostrarMensajeEmergente() {
+        var popupContainer = document.getElementById('popup-container');
+        popupContainer.style.display = 'flex';
+        setTimeout(function () {
+            popupContainer.style.display = 'none';
+        }, 2000);
     }
 
     // Crear nuevo elemento
     var card = document.createElement('div');
     card.className = 'dataMenu-card';
 
-    // Contenido de la tarjeta
+    // Contenido tarjeta
     card.innerHTML = `
         <div class="dataMenu-card-buttons">
             <button class="delete"><svg width="40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -30,7 +50,7 @@ function generateCard() {
         <div class="dataMenu-card-data">
             <h3>NOMBRE: <span>${nombre}</span></h3>
             <h3>EMAIL: <span>${email}</span></h3>
-            <h3>DATA1: <span>${dato1}</span></h3>
+            <h3>DATA: <span>${dato1}/${dato2}/${pass}</span></h3>
         </div>
     `;
 
@@ -50,3 +70,21 @@ function setupDeleteButtons() {
     });
 }
 setupDeleteButtons();
+
+function vaciarCampos() {
+    // Obtén referencias a todos los campos de entrada
+    var nombreInput = document.getElementById('nombreInput');
+    var emailInput = document.getElementById('emailInput');
+    var dato1Input = document.getElementById('dato1Input');
+    var dato2Input = document.getElementById('dato2Input');
+    var contrasenaInput = document.getElementById('contrasenaInput');
+    var repetirContrasenaInput = document.getElementById('repetirContrasenaInput');
+
+    // Vacía los valores de los campos
+    nombreInput.value = '';
+    emailInput.value = '';
+    dato1Input.value = '';
+    dato2Input.value = '';
+    contrasenaInput.value = '';
+    repetirContrasenaInput.value = '';
+}
