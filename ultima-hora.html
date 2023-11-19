@@ -25,25 +25,198 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <style>
+        .headline-topbar {
+            background-color: aqua;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
 
+        .headline-topbar-firstlink {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .headline-topbar-secondlink {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .headline-topbar-secondlink p {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .headline-centralbar {
+            background-color: red;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 180px;
+            padding-right: 100px;
+        }
+
+        .headline-centralbar-menu button {
+            height: 50px;
+            width: 50px;
+        }
+
+        .headline-centralbar h1 {
+            color: white;
+            font-size: 50px;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            font-size: 12px;
+            padding-left: 80px;
+        }
+
+        nav {
+            background-color: aqua;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .headline-nav button {
+            width: 50px;
+            height: 50px;
+        }
+
+        .main-article {
+            margin-left: 140px;
+            margin-top: 10px;
+        }
+
+        .main-article h2 {
+            font-size: 34px;
+            max-width: 750px;
+            margin-bottom: 0;
+        }
+
+        .main-article p {
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+
+        .main-article-subPanel {
+            display: flex;
+            flex-direction: row;
+            margin-left: 140px;
+            gap: 2px;
+        }
+
+        .main-article-subPanel img {
+            width: 180px;
+        }
+
+        .main-article-subPanel h4 {
+            font-size: 14px;
+            max-width: 200px;
+        }
+
+        .main-article-subPanelBig {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            gap: 25px;
+            padding-left: 140px;
+            padding-right: 200px;
+        }
+
+        .main-article-subPanelBig-element {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-article-subPanelBig-element img {
+            width: 400px;
+        }
+
+        .main-article-subPanelBig-element p {
+            max-width: 400px;
+            font-size: 26px;
+            margin-bottom: 0;
+        }
+
+        .red {
+            background-color: red;
+            color: white;
+        }
+
+        .main-article-subPanelSecond {
+            display: flex;
+            flex-direction: row;
+            margin-left: 140px;
+            margin-top: 5px;
+            gap: 20px;
+            max-width: 150px;
+        }
+
+        .main-article-subPanelSecond img {
+            width: 280px;
+        }
+        .ad
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+        .ad img
+        {
+            width: 1180px;
+        }
+        .main-article-subPanelSecond-element p
+        {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .main-article-subPanelSecond-element h4
+        {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        main
+        {
+            border-bottom: black solid 5px;
+            padding-bottom: 20px;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <div class="headline">
             <div class="headline-topbar">
-                <span></span>
                 <div class="headline-topbar-firstlink">
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
+                    <span>HOY ES NOTICIA:</span>
+                    <a href="">Link</a>
+                    <p>-</p>
+                    <a href="">Link</a>
+                    <p>-</p>
+                    <a href="">Link</a>
                 </div>
                 <div class="headline-topbar-secondlink">
-                    <a href=""></a>
+                    <a href="">MALLORCA</a>
                     <p> | </p>
-                    <a href=""></a>
+                    <a href="">MENORCA</a>
                     <p> | </p>
-                    <a href=""></a>
+                    <a href="">IBIZA</a>
                 </div>
             </div>
             <div class="headline-centralbar">
@@ -52,31 +225,121 @@
                 </div>
                 <h1>Ultima Hora</h1>
                 <div class="headline-centralbar-usermenu">
-                    <button></button>
-                    <button></button>
+                    <button>Iniciar sesión</button>
+                    <button>Registrate</button>
                 </div>
             </div>
             <nav>
                 <ul class="headline-nav">
-                    <li><button><svg></svg></button></li>
-                    <li><h2></h2></li>
-                    <li><h2></h2></li>
-                    <li><h2></h2></li>
-                    <li><h2></h2></li>
-                    <li><h2></h2></li>
-                    <li><h2></h2></li>
-                    <li><h2></h2></li>
-                    <li><h2></h2></li>
-                    <li><h2></h2></li>
-                    <li><h2></h2></li>
-                    <li><search><button></button></search></li>
+                    <li><button></button></li>
+                    <li>
+                        <h2>NOTICIAS</h2>
+                    </li>
+                    <li>
+                        <h2>SUCESOS</h2>
+                    </li>
+                    <li>
+                        <h2>DEPORTES</h2>
+                    </li>
+                    <li>
+                        <h2>OPINIÓN</h2>
+                    </li>
+                    <li>
+                        <h2>XALOC</h2>
+                    </li>
+                    <li>
+                        <h2>PARTICIPA</h2>
+                    </li>
+                    <li>
+                        <h2>OCIO</h2>
+                    </li>
+                    <li>
+                        <h2>VIPS</h2>
+                    </li>
+                    <li>
+                        <h2>GUÍA ÚTIL</h2>
+                    </li>
+                    <li>
+                        <h2>MONOGRÁFICOS</h2>
+                    </li>
+                    <li>
+                        <search><button></button></search>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-       
+        <div class="main-article">
+            <img src="https://uh.gsstatic.es/sfAttachPlugin/getCachedContent/id/2632935/width/750/height/450/crop/1">
+            <h3>ARTÀ</h3>
+            <h2>El homicida detenido en Artà se escondió debajo de su cama tras cometer el crimen</h2>
+            <p>La Guardia Civil ya tiene las cámaras de seguridad que grabaron el ataque mortal a Orlando Marcelo.</p>
+            <h4>Julio Bastida</h4>
+        </div>
+        <div class="main-article-subPanel">
+            <div class="main-article-subPanel-element">
+                <img src="https://uh.gsstatic.es/sfAttachPlugin/getPreview/id/2632347">
+                <h4>Una cámara grabó el ataque mortal a Orlando Marcelo en Artà</h4>
+            </div>
+            <div class="main-article-subPanel-element">
+                <img src="https://uh.gsstatic.es/sfAttachPlugin/getPreview/id/2632347">
+                <h4>Una cámara grabó el ataque mortal a Orlando Marcelo en Artà</h4>
+            </div>
+            <div class="main-article-subPanel-element">
+                <img src="https://uh.gsstatic.es/sfAttachPlugin/getPreview/id/2632347">
+                <h4>Una cámara grabó el ataque mortal a Orlando Marcelo en Artà</h4>
+            </div>
+            <div class="main-article-subPanel-element">
+                <img src="https://uh.gsstatic.es/sfAttachPlugin/getPreview/id/2632347">
+                <h4>Una cámara grabó el ataque mortal a Orlando Marcelo en Artà</h4>
+            </div>
+        </div>
+        <div class="main-article-subPanelBig">
+            <div class="main-article-subPanelBig-element">
+                <img
+                    src="https://uh.gsstatic.es/sfAttachPlugin/getCachedContent/id/2627331/width/350/height/200/crop/1">
+                <span>Local</span>
+                <p>Los restaurantes de Mallorca se suman en masa a cobrar una parte por adelantado</p>
+                <h4>Alicia Mateos</h4>
+            </div>
+            <div class="main-article-subPanelBig-element red">
+                <img
+                    src="https://uh.gsstatic.es/sfAttachPlugin/getCachedContent/id/2632293/width/350/height/200/crop/1">
+                <span>Local</span>
+                <p>¿Cuándo toman la calle los mallorquines? Un repaso por las protestas más multitudinarias en la isla
+                </p>
+                <h4>Kike Oñate</h4>
+            </div>
+        </div>
+        <aside>
+            <div class="ad">
+                <img src="https://uh.gsstatic.es/cintillo/1249.png">
+            </div>
+        </aside>
+        <div class="main-article-subPanelSecond">
+            <div class="main-article-subPanelSecond-element">
+                <img src="https://uh.gsstatic.es/sfAttachPlugin/getPreview/id/2632347">
+                <p>SIURELLS 2023</p>
+                <h4>Una cámara grabó el ataque mortal a Orlando Marcelo en Artà</h4>
+            </div>
+            <div class="main-article-subPanelSecond-element">
+                <img src="https://uh.gsstatic.es/sfAttachPlugin/getPreview/id/2632347">
+                <p>SIURELLS 2023</p>
+                <h4>Una cámara grabó el ataque mortal a Orlando Marcelo en Artà</h4>
+            </div>
+            <div class="main-article-subPanelSecond-element">
+                <img src="https://uh.gsstatic.es/sfAttachPlugin/getPreview/id/2632347">
+                <p>SIURELLS 2023</p>
+                <h4>Una cámara grabó el ataque mortal a Orlando Marcelo en Artà</h4>
+            </div>
+            <div class="main-article-subPanelSecond-element">
+                <img src="https://uh.gsstatic.es/sfAttachPlugin/getPreview/id/2632347">
+                <p>SIURELLS 2023</p>
+                <h4>Una cámara grabó el ataque mortal a Orlando Marcelo en Artà</h4>
+            </div>
+        </div>
     </main>
 </body>
 
