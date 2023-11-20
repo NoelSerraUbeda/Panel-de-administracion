@@ -1,9 +1,12 @@
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: lightblue;
     position: relative;
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: hidden;    
+    margin: 0;
+    padding: 0;
 }
 
 /* Encabezado */
@@ -74,7 +77,7 @@ main {
     margin-top: 10px;
     overflow: scroll;
     display: flex;
-    height: 810px;
+    height: 840px;
     width: 40%;
 }
 
