@@ -1,10 +1,9 @@
-
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: lightblue;
     position: relative;
     overflow-x: hidden;
-    overflow-y: hidden;    
+    overflow-y: hidden;
     margin: 0;
     padding: 0;
 }
@@ -13,14 +12,14 @@ body {
 
 h1 {
     position: absolute;
+    font-size: 3.5rem;
     font-weight: 900;
-    font-size: 60px;
     color: white;
     left: 32%;
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 2rem;
     color: white;
 }
 
@@ -36,20 +35,20 @@ header {
     flex-direction: row;
     align-items: center;
     padding-right: 15px;
-    padding-left: 50px;
+    padding-left: 20px;
     display: flex;
 }
 
 .users {
     flex-direction: row;
     display: flex;
-    width: 300px;
+    width: 30rem;
     gap: 15px;
 }
 
 nav svg {
-    cursor: pointer;
     transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
     fill: white;
 }
 
@@ -59,10 +58,6 @@ nav svg:hover {
 }
 
 /* Contenido principal */
-
-main {
-    border-radius: 15px;
-}
 
 .dataMenu {
     flex-direction: row;
@@ -137,7 +132,7 @@ main {
 }
 
 .dataMenu-form-buttons {
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
     flex-direction: row;
     margin-left: 20px;
@@ -213,7 +208,7 @@ input:focus {
 
 /* Botones */
 
-button {
+main button {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
     transition: background-color 0.2s ease-in-out;
     background-color: #06f;
@@ -249,21 +244,7 @@ button:hover::before {
     left: 0;
 }
 
-.save {
-    position: absolute;
-    bottom: -100px;
-    right: 20px;
-}
 
-.save button {
-    height: 80px;
-    width: 80px;
-}
-
-.save button:hover {
-    transition: transform 0.3s ease, color 0.3s ease;
-    transform: scale(1.05);
-}
 
 @media only screen and (max-width: 1550px) {
 
