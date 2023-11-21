@@ -3,7 +3,6 @@ body {
     background-color: lightblue;
     position: relative;
     overflow-x: hidden;
-    overflow-y: hidden;
     margin: 0;
     padding: 0;
 }
@@ -47,7 +46,7 @@ header {
 }
 
 nav svg {
-    transition: transform 0.3s ease, color 0.3s ease;
+    transition: transform 0.8s ease, color 0.8s ease;
     cursor: pointer;
     fill: white;
 }
@@ -72,7 +71,7 @@ nav svg:hover {
     margin-top: 10px;
     overflow: scroll;
     display: flex;
-    height: 840px;
+    height: 720px;
     width: 40%;
 }
 
@@ -170,7 +169,7 @@ form {
     border-radius: 15px;
     align-items: center;
     padding-top: 10px;
-    margin-top: 5px;
+    margin-top: 10px;
     flex-wrap: wrap;
     display: flex;
     width: 850px;
@@ -205,6 +204,49 @@ input:focus {
     text-indent: 10px;
     font-size: 30px;
 }
+
+.dataMenu-form-filter {
+    background-image: linear-gradient(to bottom, #fff, #f8eedb);
+    border: 5px solid #06f;
+    border-radius: 15px;
+    width: 98.3%;
+    margin: 5px;
+}
+
+
+
+
+.dataMenu-form-filter button {
+    transition: transform 0.3s ease, color 0.3s ease;
+    width: 60px;
+    height: 50px;
+    margin: 0.7rem;
+}
+
+.dataMenu-form-filter button:hover {
+    transform: scale(1.1);
+}
+
+#filterForm {
+    
+    display: none;
+    flex-direction: column;
+    width: 60%;
+    margin-top: -55px;
+}
+.dataMenu-form-filter form {
+    margin-left: 25%;
+    margin-bottom: 2%;
+}
+
+#filterForm button{
+  color: white;
+  font-size: 30px;
+  box-shadow: none;
+  width: 10rem;
+}
+
+
 
 /* Botones */
 
@@ -243,8 +285,6 @@ button::before {
 button:hover::before {
     left: 0;
 }
-
-
 
 @media only screen and (max-width: 1550px) {
 
@@ -316,10 +356,6 @@ button:hover::before {
             width: 80%;
         }
 
-        .save {
-            bottom: -110px;
-        }
-
         @media only screen and (max-width: 769px) {
 
             h1,
@@ -367,16 +403,8 @@ button:hover::before {
                 font-size: 11px;
             }
 
-            .save {
-                bottom: -10px;
-                height: 0px;
-                right: 10px;
-            }
-
-            .save button {
-                height: 60px;
-                width: 60px;
-                background-color: #06f;
+            .dataMenu-form-filter {
+                width: 97%;
             }
 
             main {
