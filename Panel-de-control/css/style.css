@@ -7,6 +7,10 @@ body {
     padding: 0;
 }
 
+select {
+    cursor: pointer;
+}
+
 /* Encabezado */
 
 h1 {
@@ -22,21 +26,43 @@ h2 {
     color: white;
 }
 
-header {
-    border: 8px solid #06f;
-    border-radius: 10px;
-    margin: 5px;
-}
-
 .topnav {
-    background-color: rgb(44, 44, 207);
+    background-color: hsl(240, 65%, 49%);
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
     padding-right: 15px;
     padding-left: 20px;
     display: flex;
+    border: 8px solid hsl(216, 100%, 50%)6ff;
+    border-radius: 10px;
+    margin: 5px;
 }
+
+.topnav-filter
+{
+    margin: 5px;
+    width: 89%;
+    background-color:hsl(39, 67%, 92%);
+    padding: 0.5rem 5%;
+    border: 5px solid hsl(216, 100%, 50%);
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.topnav-filter svg
+{
+    width: 40px;
+    height: 50px;
+}
+
+.topnav-filter button
+{
+    margin: 2px;
+}
+
 
 .users {
     flex-direction: row;
@@ -213,44 +239,9 @@ input:focus {
     margin: 5px;
 }
 
-
-
-
-.dataMenu-form-filter button {
-    transition: transform 0.3s ease, color 0.3s ease;
-    width: 60px;
-    height: 50px;
-    margin: 0.7rem;
-}
-
-.dataMenu-form-filter button:hover {
-    transform: scale(1.1);
-}
-
-#filterForm {
-    
-    display: none;
-    flex-direction: column;
-    width: 60%;
-    margin-top: -55px;
-}
-.dataMenu-form-filter form {
-    margin-left: 25%;
-    margin-bottom: 2%;
-}
-
-#filterForm button{
-  color: white;
-  font-size: 30px;
-  box-shadow: none;
-  width: 10rem;
-}
-
-
-
 /* Botones */
 
-main button {
+button {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
     transition: background-color 0.2s ease-in-out;
     background-color: #06f;
