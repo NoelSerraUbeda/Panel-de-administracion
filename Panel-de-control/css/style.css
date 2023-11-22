@@ -7,10 +7,6 @@ body {
     padding: 0;
 }
 
-select {
-    cursor: pointer;
-}
-
 /* Encabezado */
 
 h1 {
@@ -27,42 +23,34 @@ h2 {
 }
 
 .topnav {
+    border: 8px solid hsl(216, 100%, 50%)6ff;
     background-color: hsl(240, 65%, 49%);
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
+    border-radius: 10px;
     padding-right: 15px;
     padding-left: 20px;
     display: flex;
-    border: 8px solid hsl(216, 100%, 50%)6ff;
-    border-radius: 10px;
     margin: 5px;
 }
 
-.topnav-filter
-{
+.topnav-filter {
+    border: 5px solid hsl(216, 100%, 50%);
+    background-color: hsl(39, 67%, 92%);
+    justify-content: center;
+    border-radius: 1.5rem;
+    padding: 0.5rem 5%;
+    align-items: start;
+    display: flex;
     margin: 5px;
     width: 89%;
-    background-color:hsl(39, 67%, 92%);
-    padding: 0.5rem 5%;
-    border: 5px solid hsl(216, 100%, 50%);
-    border-radius: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: start;
 }
 
-.topnav-filter svg
-{
-    width: 40px;
-    height: 50px;
+.topnav-filter svg {
+    width: 30px;
+    height: 40px;
 }
-
-.topnav-filter button
-{
-    margin: 2px;
-}
-
 
 .users {
     flex-direction: row;
@@ -89,19 +77,18 @@ nav svg:hover {
     display: flex;
 }
 
-.dataMenu-info {
+.dataMenu-table {
     justify-content: start;
     flex-direction: column;
     align-items: center;
-    margin-left: 20px;
     margin-top: 10px;
     overflow: scroll;
     display: flex;
     height: 720px;
-    width: 40%;
+    width: 100%;
 }
 
-.dataMenu-info::-webkit-scrollbar {
+.dataMenu-table::-webkit-scrollbar {
     display: none;
 }
 
@@ -113,11 +100,10 @@ nav svg:hover {
     border-right-width: 8px;
     border-top-width: 10px;
     border-radius: 15px;
-    margin-right: 50px;
     text-indent: 20px;
-    font-size: 16px;
-    width: 600px;
     margin: 10px;
+    font-size: 16px;
+    width: 700px;
 }
 
 .dataMenu-card-buttons {
@@ -153,7 +139,7 @@ nav svg:hover {
     position: relative;
     display: flex;
     height: 100%;
-    width: 60%;
+    width: 100%;
 }
 
 .dataMenu-form-buttons {
@@ -202,19 +188,46 @@ form {
     gap: 15px;
 }
 
-form input {
+form input,
+textarea {
     background-image: linear-gradient(to bottom, #fff, #f8eedb);
     border: 5px solid #f8eedb;
     border-radius: 15px;
     text-align: center;
     margin-top: 5px;
-    font-size: 28px;
+    font-size: 22px;
     outline: none;
-    width: 380px;
-    height: 35px;
+    height: 30px;
+    width: 350px;
+}
+
+.row-input {
+    width: 90%;
+}
+
+.row-input input {
+    width: 100%;
 }
 
 input:focus {
+    border: 5px solid #06f;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+textarea {
+    text-align: start;
+    height: 200px;
+    padding: 5px;
+    resize: none;
+    width: 100%;
+}
+
+textarea:focus {
     border: 5px solid #06f;
 }
 
@@ -228,16 +241,9 @@ input:focus {
     color: whitesmoke;
     font-weight: bolder;
     text-indent: 10px;
-    font-size: 30px;
+    font-size: 22px;
 }
 
-.dataMenu-form-filter {
-    background-image: linear-gradient(to bottom, #fff, #f8eedb);
-    border: 5px solid #06f;
-    border-radius: 15px;
-    width: 98.3%;
-    margin: 5px;
-}
 
 /* Botones */
 
@@ -288,11 +294,15 @@ button:hover::before {
         display: none;
     }
 
+    .topnav-filter {
+        width: 87%;
+    }
+
     .dataMenu {
         flex-direction: column;
     }
 
-    .dataMenu-info {
+    .dataMenu-table {
         justify-content: center;
         flex-direction: row;
         flex-wrap: wrap;
@@ -338,7 +348,7 @@ button:hover::before {
 
     @media only screen and (max-width: 1280px) {
 
-        .dataMenu-info {
+        .dataMenu-table {
             flex-direction: column;
         }
 
@@ -356,11 +366,11 @@ button:hover::before {
 
             .dataMenu-card {
                 font-size: 13px;
-                height: 100px;
-                width: 350px;
+                width: 80%;
+                margin-left: 0;
             }
 
-            .dataMenu-info {
+            .dataMenu-table {
                 justify-content: start;
                 align-items: center;
                 overflow: visible;
@@ -381,10 +391,10 @@ button:hover::before {
             form input {
                 font-size: 20px;
                 height: 30px;
-                width: 150px;
+                width: 180px;
             }
 
-            .writter-section label {
+            .row-input label {
                 font-size: 15px;
                 text-indent: 0;
             }
@@ -392,10 +402,6 @@ button:hover::before {
             .dataMenu-card-data {
                 margin-top: 20px;
                 font-size: 11px;
-            }
-
-            .dataMenu-form-filter {
-                width: 97%;
             }
 
             main {
