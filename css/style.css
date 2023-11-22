@@ -198,7 +198,8 @@ textarea {
     font-size: 22px;
     outline: none;
     height: 30px;
-    width: 350px;
+    width: 365px;
+    padding: 0px;
 }
 
 .row-input {
@@ -206,7 +207,7 @@ textarea {
 }
 
 .row-input input {
-    width: 100%;
+    width: 98.8%;
 }
 
 input:focus {
@@ -220,9 +221,10 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 textarea {
+    padding: 10px;
+    box-sizing: border-box;
     text-align: start;
     height: 200px;
-    padding: 5px;
     resize: none;
     width: 100%;
 }
@@ -333,7 +335,7 @@ button:hover::before {
     }
 
     form input {
-        width: 300px;
+        width: 350px;
         height: 30px;
     }
 
