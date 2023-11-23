@@ -22,7 +22,13 @@ h2 {
     color: white;
 }
 
+header {
+    position: relative;
+    z-index: 6;
+}
+
 .topnav {
+    position: relative;
     border: 8px solid hsl(216, 100%, 50%)6ff;
     background-color: hsl(240, 65%, 49%);
     justify-content: space-between;
@@ -283,6 +289,33 @@ button:hover::before {
     left: 0;
 }
 
+.topnav-menu {
+    background-image: linear-gradient(to bottom, #fff, #f8eedb);
+    border: 5px solid hsl(211, 100%, 50%);
+    transition: height 0.5s ease;
+    border-radius: 25px;
+    position: absolute;
+    overflow: hidden;
+    height: 0px;
+    margin: 5px;
+    z-index: -4;
+    width: 98%;
+    left: 10px;
+    top: 60px;
+}
+
+.topnav-menu-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 100px;
+    padding: 10px;
+}
+
+.topnav-menu-content h2 {
+    color: black;
+}
+
 @media only screen and (max-width: 1550px) {
 
     body {
@@ -342,6 +375,10 @@ button:hover::before {
         text-indent: 0;
     }
 
+    .topnav-menu {
+        width: 97%;
+    }
+
     main {
         margin-bottom: 150px;
     }
@@ -355,6 +392,10 @@ button:hover::before {
         .dataMenu-card {
             font-size: 15px;
             width: 80%;
+        }
+
+        .topnav-menu {
+            width: 95%;
         }
 
         @media only screen and (max-width: 769px) {
@@ -402,6 +443,10 @@ button:hover::before {
             .dataMenu-card-data {
                 margin-top: 20px;
                 font-size: 11px;
+            }
+
+            .topnav-menu {
+                width: 92%;
             }
 
             main {
