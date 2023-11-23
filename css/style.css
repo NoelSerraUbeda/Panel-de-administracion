@@ -1,6 +1,6 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: lightblue;
+    background-color: hsl(195, 53%, 79%);
     position: relative;
     overflow-x: hidden;
     margin: 0;
@@ -10,10 +10,10 @@ body {
 /* Encabezado */
 
 h1 {
+    color: hsl(0, 0%, 100%);
     position: absolute;
     font-size: 3.5rem;
     font-weight: 900;
-    color: white;
     left: 32%;
 }
 
@@ -26,7 +26,6 @@ h2 {
     border: 8px solid hsl(216, 100%, 50%)6ff;
     background-color: hsl(240, 65%, 49%);
     justify-content: space-between;
-    flex-direction: row;
     align-items: center;
     border-radius: 10px;
     padding-right: 15px;
@@ -41,6 +40,7 @@ h2 {
     justify-content: center;
     border-radius: 1.5rem;
     padding: 0.5rem 5%;
+    padding-bottom: 0.8rem;
     align-items: start;
     display: flex;
     margin: 5px;
@@ -52,17 +52,24 @@ h2 {
     height: 40px;
 }
 
+.topnav-filter button {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.topnav-filter button:hover {
+    transform: scale(1.1);
+}
+
 .users {
-    flex-direction: row;
     display: flex;
     width: 30rem;
     gap: 15px;
 }
 
 nav svg {
-    transition: transform 0.8s ease, color 0.8s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
+    fill: hsl(0, 0%, 100%);
     cursor: pointer;
-    fill: white;
 }
 
 
@@ -73,7 +80,6 @@ nav svg:hover {
 /* Contenido principal */
 
 .dataMenu {
-    flex-direction: row;
     display: flex;
 }
 
@@ -95,14 +101,13 @@ nav svg:hover {
 .dataMenu-card {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
     background-image: linear-gradient(to bottom, #fff, #f8eedb);
-    background-color: transparent;
-    border: 5px solid #06f;
+    border: 5px solid hsl(216, 100%, 50%);
     border-right-width: 8px;
     border-top-width: 10px;
     border-radius: 15px;
     text-indent: 20px;
+    font-size: 18px;
     margin: 10px;
-    font-size: 16px;
     width: 700px;
 }
 
@@ -115,8 +120,7 @@ nav svg:hover {
 }
 
 .dataMenu-card-buttons button {
-    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-    background-color: #06f;
+    background-color: hsl(216, 100%, 50%);
     justify-content: center;
     border-radius: 15px;
     align-items: center;
@@ -136,19 +140,14 @@ nav svg:hover {
 
 .dataMenu-form {
     flex-direction: column;
-    position: relative;
     display: flex;
-    height: 100%;
     width: 100%;
 }
 
 .dataMenu-form-buttons {
     justify-content: end;
     align-items: center;
-    flex-direction: row;
-    margin-left: 20px;
     display: flex;
-    height: 70px;
 }
 
 .dataMenu-form-buttons button {
@@ -172,9 +171,8 @@ nav svg:hover {
 
 form {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-    background: linear-gradient(to left, #007BFF, #00BFFF);
-    border-right-width: 8px;
-    border: 5px solid #06f;
+    background: linear-gradient(to left, hsl(211, 100%, 50%), hsl(195, 100%, 50%));
+    border: 5px solid hsl(216, 100%, 50%);
     justify-content: center;
     border-top-width: 25px;
     padding-bottom: 20px;
@@ -190,8 +188,8 @@ form {
 
 form input,
 textarea {
-    background-image: linear-gradient(to bottom, #fff, #f8eedb);
-    border: 5px solid #f8eedb;
+    background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
+    border: 5px solid hsl(39, 67%, 92%);
     border-radius: 15px;
     text-align: center;
     margin-top: 5px;
@@ -211,13 +209,13 @@ textarea {
 }
 
 input:focus {
-    border: 5px solid #06f;
+    border: 5px solid hsl(216, 100%, 50%);
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 textarea {
@@ -230,7 +228,7 @@ textarea {
 }
 
 textarea:focus {
-    border: 5px solid #06f;
+    border: 5px solid hsl(216, 100%, 50%);
 }
 
 .writter-section {
@@ -240,7 +238,7 @@ textarea:focus {
 
 .writter-section label {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    color: whitesmoke;
+    color: hsl(0, 0%, 96%);
     font-weight: bolder;
     text-indent: 10px;
     font-size: 22px;
@@ -252,7 +250,7 @@ textarea:focus {
 button {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
     transition: background-color 0.2s ease-in-out;
-    background-color: #06f;
+    background-color: hsl(216, 100%, 50%);
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -263,7 +261,7 @@ button {
 
 button::before {
     transition: left 0.2s ease-in-out;
-    background-color: steelblue;
+    background-color: hsl(207, 44%, 49%);
     position: absolute;
     height: 100%;
     content: '';
@@ -274,11 +272,11 @@ button::before {
 }
 
 .delete::before {
-    background-color: rgb(214, 43, 43);
+    background-color: hsl(0, 68%, 50%);
 }
 
 .edit::before {
-    background-color: rgb(49, 214, 43);
+    background-color: hsl(118, 68%, 50%);
 }
 
 button:hover::before {
