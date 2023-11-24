@@ -29,7 +29,7 @@
     <!-- Documentos enlazados -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/menu.css">
-    <script src="../js/app.js"></script>
+    <script type="module" src="../js/app.js"></script>
 
 </head>
 
@@ -51,19 +51,22 @@
             </div>
             <h1>Panel de Administración</h1>
             <nav>
-                <input type="checkbox" role="button" aria-label="Display the menu" class="menu-icon" id="menu-toggle">
-                <label class="nav-menu" for="menu-toggle">
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                </label>            
+                <button class="menu-icon">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </button>
             </nav>
         </div>
         <div class="topnav-menu">
             <div class="topnav-menu-content">
                 <div class="topnav-menu-content">
                     <div class="topnav-menu-content-card">
-          
+                        <h2>Contenido</h2>
+                    </div>
+
+                    <div class="topnav-menu-content-card">
+                        <h2>Contenido</h2>
                     </div>
                 </div>
             </div>
@@ -83,13 +86,15 @@
                 <div class="dataMenu-table">
                     <div class="dataMenu-card">
                         <div class="dataMenu-card-buttons">
-                            <button class="delete"><svg width="40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <button class="delete"><svg width="40px" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24">
                                     <title>Delete</title>
                                     <path
                                         d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z"
                                         fill="white" />
                                 </svg></button>
-                            <button class="edit"><svg width="80px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <button class="edit"><svg width="80px" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24">
                                     <title>Edit</title>
                                     <path
                                         d="M10 20H6V4H13V9H18V12.1L20 10.1V8L14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H10V20M20.2 13C20.3 13 20.5 13.1 20.6 13.2L21.9 14.5C22.1 14.7 22.1 15.1 21.9 15.3L20.9 16.3L18.8 14.2L19.8 13.2C19.9 13.1 20 13 20.2 13M20.2 16.9L14.1 23H12V20.9L18.1 14.8L20.2 16.9Z"
@@ -104,7 +109,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="dataMenu-form">
                 <div class="dataMenu-form-buttons">
                     <button id="deleteData"><svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -113,7 +118,7 @@
                                 d="M16.24,3.56L21.19,8.5C21.97,9.29 21.97,10.55 21.19,11.34L12,20.53C10.44,22.09 7.91,22.09 6.34,20.53L2.81,17C2.03,16.21 2.03,14.95 2.81,14.16L13.41,3.56C14.2,2.78 15.46,2.78 16.24,3.56M4.22,15.58L7.76,19.11C8.54,19.9 9.8,19.9 10.59,19.11L14.12,15.58L9.17,10.63L4.22,15.58Z" />
                         </svg>
                     </button>
-        
+
                     <div class="save">
                         <button id="saveButton"><svg width="100%" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24">
@@ -127,10 +132,10 @@
                 <div class="dataMenu-form-writter">
                     <form id="dataForm">
                         <div class="row-input">
-                        <div class="writter-section">
-                            <label>Title</label>
-                            <input type="text">
-                        </div>
+                            <div class="writter-section">
+                                <label>Title</label>
+                                <input type="text">
+                            </div>
                         </div>
                         <div class="writter-section">
                             <label>Date</label>

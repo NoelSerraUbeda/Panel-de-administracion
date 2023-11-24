@@ -84,6 +84,44 @@ nav svg:hover {
     transform: scale(1.1);
 }
 
+/* Panel del navegador */
+
+.topnav-menu {
+    background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
+    border: 5px solid hsl(211, 100%, 50%);
+    transition: height 0.5s ease;
+    border-radius: 25px;
+    position: absolute;
+    overflow: hidden;
+    height: 0px;
+    margin: 5px;
+    z-index: -4;
+    width: 98%;
+    left: 10px;
+    top: 60px;
+}
+
+.topnav-menu-content {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 100px;
+    padding: 10px;
+}
+
+.topnav-menu-content h2 {
+    color: hsl(0, 0%, 96%);
+}
+
+.topnav-menu-content-card
+{
+    border: 5px solid hsl(211, 100%, 50%);
+    background-color: hsl(195, 53%, 79%);
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 25px;
+}
+
 /* Contenido principal */
 
 .dataMenu {
@@ -254,7 +292,13 @@ textarea:focus {
 
 /* Botones */
 
-button {
+header button:hover
+{
+    transition: transform 0.3s ease, color 0.3s ease;
+    transform: scale(1.05);
+}
+
+main button {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
     transition: background-color 0.2s ease-in-out;
     background-color: hsl(216, 100%, 50%);
@@ -266,7 +310,7 @@ button {
     z-index: 1;
 }
 
-button::before {
+main button::before {
     transition: left 0.2s ease-in-out;
     background-color: hsl(207, 44%, 49%);
     position: absolute;
@@ -288,37 +332,6 @@ button::before {
 
 button:hover::before {
     left: 0;
-}
-
-.topnav-menu {
-    background-image: linear-gradient(to bottom, #fff, #f8eedb);
-    border: 5px solid hsl(211, 100%, 50%);
-    transition: height 0.5s ease;
-    border-radius: 25px;
-    position: absolute;
-    overflow: hidden;
-    height: 0px;
-    margin: 5px;
-    z-index: -4;
-    width: 98%;
-    left: 10px;
-    top: 60px;
-}
-
-.topnav-menu-content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 100px;
-    padding: 10px;
-}
-
-.topnav-menu-content h2 {
-    color: black;
-}
-
-.topnav-menu.expanded {
-    height: 54rem;
 }
 
 @media only screen and (max-width: 1550px) {

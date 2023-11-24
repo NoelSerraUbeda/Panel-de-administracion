@@ -1,8 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const desplegar = document.querySelector('.menu-icon');
-    const topnavMenu = document.querySelector('.topnav-menu');
+import './menu-button.js';
 
-    desplegar.addEventListener('click', function () {
-        topnavMenu.classList.toggle('expanded');
-    });
-});
+
+  
