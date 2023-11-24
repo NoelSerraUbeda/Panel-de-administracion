@@ -224,7 +224,8 @@
                             </div>
                         </form>
                         <form id="image">
-                            <p>Lorem ipsum</p>
+                            <div class="gallery">
+                                
                         </form>
                     </div>
                 </div>
@@ -237,21 +238,21 @@
                 textToAddClass.classList.add("selected");
                 textToRemoveClass.classList.remove("selected");
             }
-
+        
             const main = document.getElementById("main");
             const image = document.getElementById("image");
             const principalText = document.getElementById("main-option");
             const imageText = document.getElementById("image-option");
-
+        
             function principalActive() {
                 setActive(main, image, principalText, imageText);
             }
-
+        
             function imageActive() {
                 setActive(image, main, imageText, principalText);
             }
         </script>
-
+        
     </main>
 </body>
 

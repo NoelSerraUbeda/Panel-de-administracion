@@ -77,7 +77,6 @@ nav svg {
     cursor: pointer;
 }
 
-
 nav svg:hover {
     transform: scale(1.1);
 }
@@ -100,11 +99,11 @@ nav svg:hover {
 }
 
 .topnav-menu-content {
-    display: flex;
     justify-content: center;
     align-items: start;
-    gap: 100px;
     padding: 10px;
+    display: flex;
+    gap: 100px;
 }
 
 .topnav-menu-content h4 {
@@ -409,6 +408,28 @@ button:hover::before {
     left: 0;
 }
 
+.gallery {
+    justify-content: start;
+    overflow: scroll;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 20px;
+    height: 380px;
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery img {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 250px;
+    height: auto;
+    margin: 10px;
+}
+
 @media only screen and (max-width: 1550px) {
 
     body {
@@ -555,6 +576,10 @@ button:hover::before {
 
             .dataMenu-form-windows {
                 display: none;
+            }
+
+            .gallery img {
+                width: 400px;
             }
 
             main {
