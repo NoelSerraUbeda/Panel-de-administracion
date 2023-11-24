@@ -232,23 +232,28 @@ nav svg:hover {
     display: flex;
     align-items: start;
     justify-content: start;
-    gap: 1px;
+    gap: 0px;
     margin-left: -45px;
     list-style: none;
 }
 
 .dataMenu-form-windows li {
-    background-color: hsl(216, 100%, 50%);
-    color: whitesmoke;
+    color:hsl(216, 100%, 50%);
     font-weight: 900;
     padding: 1.2rem 1rem;
     margin-top: -20px;
 }
 
 .dataMenu-form-windows li:hover {
-    background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
-    color: hsl(216, 100%, 50%);
+    background-color: hsl(207, 44%, 49%);
+    color:  whitesmoke;
     cursor: pointer;
+}
+
+ul .selected
+{
+    background-color: hsl(216, 100%, 50%);
+    color: whitesmoke;
 }
 
 .dataMenu-form-writter {
@@ -273,6 +278,11 @@ form {
     display: flex;
     width: 850px;
     gap: 15px;
+}
+
+#image
+{
+    display: none;
 }
 
 form input,

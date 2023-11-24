@@ -5,5 +5,6 @@ export default (() => {
 
     filterIcon.addEventListener('click', function () {
         topnavFilter.classList.toggle('filter-open');
+        filterIcon.classList.toggle('rotated');
     });
 })();
