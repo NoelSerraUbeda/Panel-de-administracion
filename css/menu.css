@@ -47,11 +47,15 @@
 }
 
 .topnav-filter-form form {
-  width: 1200px;
   position: absolute;
-  gap: 50px;
-  top: 70px;
   margin-right: 0;
+  width: 80%;
+  gap: 3rem;
+  top: 70px;
+}
+
+.topnav-filter-form input {
+  width: 60%;
 }
 
 .topnav-filter-form label {
@@ -59,7 +63,7 @@
   color: hsl(0, 0%, 96%);
   font-weight: bolder;
   text-indent: 10px;
-  font-size: 22px;
+  font-size: 26px;
 }
 
 .filter-input button {
@@ -73,8 +77,7 @@
 @media only screen and (max-width: 1550px) {
 
   .topnav-filter-form form {
-    width: 900px;
-    gap: 30px;
+    gap: 2rem;
   }
 
   .topnav-filter-form label {
@@ -82,42 +85,34 @@
   }
 
   .topnav-filter-form input {
-    width: 250px;
+    width: 50%;
   }
 
-
   @media only screen and (max-width: 1280px) {
-
-    .topnav-filter-form form {
-      width: 750px;
-      gap: 20px;
-    }
 
     .topnav-filter-form label {
       font-size: 16px;
     }
 
     .topnav-filter-form input {
-      width: 200px;
+      width: 160px;
     }
-
 
     @media only screen and (max-width: 769px) {
       .topnav-filter-form form {
-        width: 400px;
         flex-direction: column;
       }
-  
+
       .topnav-filter-form label {
         font-size: 14px;
       }
-  
+
       .topnav-filter-form input {
         width: 100%;
       }
 
       .filter-open {
-        height: 380px;
+        height: 25rem;
       }
     }
   }

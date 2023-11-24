@@ -121,6 +121,7 @@ nav svg:hover {
 }
 
 /* Contenido principal */
+/* Tabla */
 
 .dataMenu {
     display: flex;
@@ -156,6 +157,7 @@ nav svg:hover {
 
 .dataMenu-card-buttons {
     flex-direction: row-reverse;
+    margin-bottom: 20px;
     border-radius: 15px;
     display: flex;
     height: 0px;
@@ -181,6 +183,8 @@ nav svg:hover {
     transform: scale(1.05);
 }
 
+/* Formulario */
+
 .dataMenu-form {
     flex-direction: column;
     display: flex;
@@ -188,8 +192,15 @@ nav svg:hover {
 }
 
 .dataMenu-form-buttons {
+    margin-bottom: 10px;
     justify-content: end;
     align-items: center;
+    display: flex;
+    gap: 30px;
+    flex-direction: row-reverse;
+}
+
+.button-panel {
     display: flex;
 }
 
@@ -206,7 +217,42 @@ nav svg:hover {
     transform: scale(1.05);
 }
 
+.dataMenu-form-windows {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
+    border: 5px solid hsl(216, 100%, 50%);
+    border-radius: 5px;
+    width: 80%;
+    overflow: hidden;
+    height: 60%;
+    position: relative;
+}
+
+.dataMenu-form-windows ul {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 1px;
+    margin-left: -45px;
+    list-style: none;
+}
+
+.dataMenu-form-windows li {
+    background-color: hsl(216, 100%, 50%);
+    color: whitesmoke;
+    font-weight: 900;
+    padding: 1.2rem 1rem;
+    margin-top: -20px;
+}
+
+.dataMenu-form-windows li:hover {
+    background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
+    color: hsl(216, 100%, 50%);
+    cursor: pointer;
+}
+
 .dataMenu-form-writter {
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -222,7 +268,7 @@ form {
     border-radius: 15px;
     align-items: center;
     padding-top: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
     flex-wrap: wrap;
     display: flex;
     width: 850px;
@@ -271,17 +317,17 @@ textarea {
 }
 
 textarea::-webkit-scrollbar {
-    width: 12px;   
+    width: 12px;
 }
 
 textarea::-webkit-scrollbar-thumb {
     background-color: hsl(207, 44%, 49%);
     border-radius: 15px;
-    cursor: pointer;  
+    cursor: pointer;
 }
 
 textarea::-webkit-scrollbar-track {
-    background-color: #eee; 
+    background-color: #eee;
     border-radius: 25px;
 }
 
@@ -301,7 +347,6 @@ textarea:focus {
     text-indent: 10px;
     font-size: 22px;
 }
-
 
 /* Botones */
 
@@ -360,9 +405,13 @@ button:hover::before {
         overflow-y: visible;
     }
 
+    .dataMenu-form-windows {
+        height: 50px;
+        width: 75%;
+    }
 
-
-    .topnav h1,h4 {
+    .topnav h1,
+    h4 {
         display: none;
     }
 
@@ -437,8 +486,6 @@ button:hover::before {
             width: 95%;
         }
 
-
-
         @media only screen and (max-width: 769px) {
 
             .dataMenu-card {
@@ -457,6 +504,10 @@ button:hover::before {
                 border-radius: 5px;
                 height: 35px;
                 width: 35px;
+            }
+
+            .dataMenu-form-buttons {
+                margin-bottom: 0px;
             }
 
             form {
@@ -483,6 +534,17 @@ button:hover::before {
 
             .topnav-menu {
                 width: 92%;
+            }
+
+            .dataMenu-form-writter {
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+            }
+
+            .dataMenu-form-windows {
+                display: none;
             }
 
             main {
