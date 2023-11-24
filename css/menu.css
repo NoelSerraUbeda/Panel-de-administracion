@@ -1,3 +1,4 @@
+/* Menu */
 .topnav-menu.active {
   height: 50rem;
 }
@@ -18,7 +19,7 @@
   height: 5px;
   width: 50px;
   margin: 6px 0;
-  transition: 0.4s;
+  transition: 0.8s;
 }
 
 .menu-icon.active .bar:nth-child(1) {
@@ -32,4 +33,92 @@
 
 .menu-icon.active .bar:nth-child(3) {
   transform: rotate(405deg) translate(-7px, -8px);
+}
+
+/* Filtrador */
+
+.filter-open {
+  height: 200px;
+}
+
+.topnav-filter-form {
+  display: flex;
+  justify-content: center;
+}
+
+.topnav-filter-form form {
+  width: 1200px;
+  position: absolute;
+  gap: 50px;
+  top: 70px;
+  margin-right: 0;
+}
+
+.topnav-filter-form label {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: hsl(0, 0%, 96%);
+  font-weight: bolder;
+  text-indent: 10px;
+  font-size: 22px;
+}
+
+.filter-input button {
+  background-color: whitesmoke;
+}
+
+.filter-input button::before {
+  background-color: orange;
+}
+
+@media only screen and (max-width: 1550px) {
+
+  .topnav-filter-form form {
+    width: 900px;
+    gap: 30px;
+  }
+
+  .topnav-filter-form label {
+    font-size: 18px;
+  }
+
+  .topnav-filter-form input {
+    width: 250px;
+  }
+
+
+  @media only screen and (max-width: 1280px) {
+
+    .topnav-filter-form form {
+      width: 750px;
+      gap: 20px;
+    }
+
+    .topnav-filter-form label {
+      font-size: 16px;
+    }
+
+    .topnav-filter-form input {
+      width: 200px;
+    }
+
+
+    @media only screen and (max-width: 769px) {
+      .topnav-filter-form form {
+        width: 400px;
+        flex-direction: column;
+      }
+  
+      .topnav-filter-form label {
+        font-size: 14px;
+      }
+  
+      .topnav-filter-form input {
+        width: 100%;
+      }
+
+      .filter-open {
+        height: 380px;
+      }
+    }
+  }
 }

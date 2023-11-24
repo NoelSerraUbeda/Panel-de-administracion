@@ -2,7 +2,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: hsl(195, 53%, 79%);
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
     margin: 0;
     padding: 0;
 }
@@ -17,7 +17,7 @@ h1 {
     left: 32%;
 }
 
-h2 {
+h4 {
     font-size: 2rem;
     color: white;
 }
@@ -44,12 +44,18 @@ header {
 .topnav-filter {
     border: 5px solid hsl(216, 100%, 50%);
     background-color: hsl(39, 67%, 92%);
-    justify-content: center;
-    border-radius: 1.5rem;
-    padding: 0.5rem 5%;
+    transition: height 0.5s ease;
+    justify-content: start;
     padding-bottom: 0.8rem;
-    align-items: start;
+    flex-direction: column;
+    border-radius: 1.5rem;
+    align-items: center;
+    align-items: center;
+    position: relative;
+    padding: 0.5rem 5%;
+    overflow: hidden;
     display: flex;
+    height: 50px;
     margin: 5px;
     width: 89%;
 }
@@ -57,14 +63,6 @@ header {
 .topnav-filter svg {
     width: 30px;
     height: 40px;
-}
-
-.topnav-filter button {
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.topnav-filter button:hover {
-    transform: scale(1.1);
 }
 
 .users {
@@ -109,17 +107,17 @@ nav svg:hover {
     padding: 10px;
 }
 
-.topnav-menu-content h2 {
+.topnav-menu-content h4 {
     color: hsl(0, 0%, 96%);
 }
 
-.topnav-menu-content-card
-{
+.topnav-menu-content-card {
     border: 5px solid hsl(211, 100%, 50%);
     background-color: hsl(195, 53%, 79%);
-    margin-top: 10px;
+    margin-top: 50px;
     padding: 10px;
     border-radius: 25px;
+    width: 33%;
 }
 
 /* Contenido principal */
@@ -267,9 +265,24 @@ textarea {
     padding: 10px;
     box-sizing: border-box;
     text-align: start;
-    height: 200px;
+    height: 150px;
     resize: none;
     width: 100%;
+}
+
+textarea::-webkit-scrollbar {
+    width: 12px;   
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: hsl(207, 44%, 49%);
+    border-radius: 15px;
+    cursor: pointer;  
+}
+
+textarea::-webkit-scrollbar-track {
+    background-color: #eee; 
+    border-radius: 25px;
 }
 
 textarea:focus {
@@ -292,8 +305,7 @@ textarea:focus {
 
 /* Botones */
 
-header button:hover
-{
+header button:hover {
     transition: transform 0.3s ease, color 0.3s ease;
     transform: scale(1.05);
 }
@@ -308,6 +320,14 @@ main button {
     cursor: pointer;
     border: none;
     z-index: 1;
+}
+
+.topnav-filter button {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.topnav-filter button:hover {
+    transform: scale(1.1);
 }
 
 main button::before {
@@ -340,8 +360,9 @@ button:hover::before {
         overflow-y: visible;
     }
 
-    h1,
-    h2 {
+
+
+    .topnav h1,h4 {
         display: none;
     }
 
@@ -416,12 +437,9 @@ button:hover::before {
             width: 95%;
         }
 
-        @media only screen and (max-width: 769px) {
 
-            h1,
-            h2 {
-                display: none;
-            }
+
+        @media only screen and (max-width: 769px) {
 
             .dataMenu-card {
                 font-size: 13px;
