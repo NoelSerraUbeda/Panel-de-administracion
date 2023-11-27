@@ -43,27 +43,50 @@
   transform: rotate(405deg) translate(-7px, -8px);
 }
 
+.filter-input .green::before {
+  background-color: hsl(118, 68%, 50%);
+}
+
+
+
+.filter-input .red::before {
+  background-color: hsl(0, 68%, 50%);
+}
+
 /* Filtrador */
 
-.filter-open {
-  height: 200px;
+body
+{
+  max-height: 1000px;
 }
 
 .topnav-filter-form {
-  display: flex;
+  background-color: hsla(0, 0%, 0%, 0.7);
   justify-content: center;
+  position: absolute;
+  margin-top: -0.5%;
+  align-items: start;
+  display: none;
+  z-index: 33;
+  width: 100%;
+  height:110%;
+  left: 0;
+  top: 0;
+}
+
+.topnav-filter-form.active {
+  display: flex;
 }
 
 .topnav-filter-form form {
-  position: absolute;
-  margin-right: 0;
-  width: 80%;
-  gap: 3rem;
-  top: 70px;
-}
-
-.topnav-filter-form input {
-  width: 60%;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  flex-direction: column;
+  font-display: flex;
+  margin-top: 10%;
+  flex-wrap: wrap;
+  height: 30%;
+  z-index: 33;
+  width: 25%;
 }
 
 .topnav-filter-form label {
@@ -71,57 +94,57 @@
   color: hsl(0, 0%, 96%);
   font-weight: bolder;
   text-indent: 10px;
-  font-size: 26px;
+  font-size: 22px;
 }
 
-.filter-input button {
-  background-color: whitesmoke;
+.filter-input {
+  flex-direction: column;
+  margin-bottom: 1rem;
+  display: flex;
+  width: 80%;
 }
 
-.filter-input button::before {
-  background-color: orange;
+.filter-input input {
+  width: 100%;
+}
+
+.buttons {
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  width: 100%;
+}
+
+.buttons button {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 1.8rem;
+  height: 100%;
+  width: 40%;
+}
+
+.filter-input button span {
+  color: white;
 }
 
 @media only screen and (max-width: 1550px) {
 
   .topnav-filter-form form {
-    gap: 2rem;
+    height: 30%;
+    width: 60%;
   }
 
-  .topnav-filter-form label {
-    font-size: 18px;
-  }
-
-  .topnav-filter-form input {
-    width: 50%;
+  .buttons button {
+    font-size: 1.5rem;
+    height: 150%;
+    width: 40%;
   }
 
   @media only screen and (max-width: 1280px) {
 
-    .topnav-filter-form label {
-      font-size: 16px;
-    }
 
-    .topnav-filter-form input {
-      width: 160px;
-    }
-
-    @media only screen and (max-width: 769px) {
-      .topnav-filter-form form {
-        flex-direction: column;
-      }
-
-      .topnav-filter-form label {
-        font-size: 14px;
-      }
-
-      .topnav-filter-form input {
-        width: 100%;
-      }
-
-      .filter-open {
-        height: 25rem;
-      }
+    .buttons button {
+      font-size: 1rem;
     }
   }
 }

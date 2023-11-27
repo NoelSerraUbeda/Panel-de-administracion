@@ -1,3 +1,3 @@
-import './menu-button.js';
-import './filter-button.js';
+import './menu.js';
+import './filter.js';
 

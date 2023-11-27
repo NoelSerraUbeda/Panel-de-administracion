@@ -9,6 +9,11 @@ body {
 
 /* Encabezado */
 
+.main-topbar {
+    display: flex;
+    justify-content: space-between;
+}
+
 h1 {
     color: hsl(0, 0%, 100%);
     position: absolute;
@@ -24,7 +29,7 @@ h4 {
 
 header {
     position: relative;
-    z-index: 6;
+    z-index: 8;
 }
 
 .topnav {
@@ -50,14 +55,13 @@ header {
     flex-direction: column;
     border-radius: 1.5rem;
     align-items: center;
-    align-items: center;
-    position: relative;
+    align-items: start;
     padding: 0.5rem 5%;
     overflow: hidden;
     display: flex;
     height: 50px;
     margin: 5px;
-    width: 89%;
+    width: 35%;
 }
 
 .topnav-filter svg {
@@ -92,7 +96,7 @@ nav svg:hover {
     overflow: hidden;
     height: 0px;
     margin: 5px;
-    z-index: -4;
+    z-index: -1;
     width: 98%;
     left: 10px;
     top: 60px;
@@ -133,7 +137,7 @@ nav svg:hover {
     margin-top: 10px;
     overflow: scroll;
     display: flex;
-    height: 720px;
+    height: 40rem;
     width: 100%;
 }
 
@@ -149,7 +153,7 @@ nav svg:hover {
     border-top-width: 10px;
     border-radius: 15px;
     text-indent: 20px;
-    font-size: 18px;
+    font-size: 17px;
     margin: 10px;
     width: 700px;
 }
@@ -180,6 +184,30 @@ nav svg:hover {
 .dataMenu-card-buttons button:hover {
     transition: transform 0.3s ease, color 0.3s ease;
     transform: scale(1.05);
+}
+
+.pages {
+    background-image: linear-gradient(to bottom, #fff, #f8eedb);
+    width: 40%;
+    height: 3.5rem;
+    margin-top: 5px;
+    border: 3px hsl(216, 100%, 50%) solid;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px;
+}
+
+.pages ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+.actual-page {
+    font-weight: 900;
+    text-decoration: underline;
+    color: hsl(216, 100%, 50%);
 }
 
 /* Formulario */
@@ -221,7 +249,7 @@ nav svg:hover {
     background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
     border: 5px solid hsl(216, 100%, 50%);
     border-radius: 5px;
-    width: 80%;
+    width: 50rem;
     overflow: hidden;
     height: 60%;
     position: relative;
@@ -237,7 +265,7 @@ nav svg:hover {
 }
 
 .dataMenu-form-windows li {
-    color:hsl(216, 100%, 50%);
+    color: hsl(216, 100%, 50%);
     font-weight: 900;
     padding: 1.2rem 1rem;
     margin-top: -20px;
@@ -245,12 +273,11 @@ nav svg:hover {
 
 .dataMenu-form-windows li:hover {
     background-color: hsl(207, 44%, 49%);
-    color:  whitesmoke;
+    color: whitesmoke;
     cursor: pointer;
 }
 
-ul .selected
-{
+ul .selected {
     background-color: hsl(216, 100%, 50%);
     color: whitesmoke;
 }
@@ -279,8 +306,7 @@ form {
     gap: 15px;
 }
 
-#image
-{
+#image {
     display: none;
 }
 
@@ -373,7 +399,6 @@ main button {
     overflow: hidden;
     cursor: pointer;
     border: none;
-    z-index: 1;
 }
 
 .topnav-filter button {
@@ -438,7 +463,7 @@ button:hover::before {
 
     .dataMenu-form-windows {
         height: 50px;
-        width: 75%;
+        width: 30rem;
     }
 
     .topnav h1,
@@ -447,7 +472,7 @@ button:hover::before {
     }
 
     .topnav-filter {
-        width: 87%;
+        width: 100%;
     }
 
     .dataMenu {
@@ -580,6 +605,10 @@ button:hover::before {
 
             .gallery img {
                 width: 400px;
+            }
+
+            .pages {
+                width: 60%;
             }
 
             main {
