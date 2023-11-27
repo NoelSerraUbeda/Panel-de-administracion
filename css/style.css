@@ -2,6 +2,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: hsl(195, 53%, 79%);
     position: relative;
+    max-height: 1000px;
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -110,6 +111,21 @@ nav svg:hover {
     gap: 100px;
 }
 
+.topnav-menu.active {
+    height: 50rem;
+}
+
+.menu-icon {
+    position: relative;
+    background: none;
+    cursor: pointer;
+    color: inherit;
+    display: block;
+    font: inherit;
+    border: none;
+    padding: 5px;
+}
+
 .topnav-menu-content h4 {
     color: hsl(0, 0%, 96%);
 }
@@ -124,6 +140,109 @@ nav svg:hover {
 }
 
 /* Contenido principal */
+/* Filtrador */
+
+.topnav-filter-form {
+    background-color: hsla(0, 0%, 0%, 0.7);
+    justify-content: center;
+    position: absolute;
+    margin-top: -0.5%;
+    align-items: start;
+    display: none;
+    z-index: 33;
+    width: 100%;
+    height: 110%;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+}
+
+.topnav-filter-form.active {
+    visibility: visible;
+
+
+}
+
+.topnav-filter-form form {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    flex-direction: column;
+    font-display: flex;
+    margin-top: 10%;
+    flex-wrap: wrap;
+    height: 30%;
+    z-index: 33;
+    width: 25%;
+}
+
+.topnav-filter-form label {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: hsl(0, 0%, 96%);
+    font-weight: bolder;
+    text-indent: 10px;
+    font-size: 22px;
+}
+
+.filter-input {
+    flex-direction: column;
+    margin-bottom: 1rem;
+    display: flex;
+    width: 80%;
+}
+
+.filter-input input {
+    width: 100%;
+}
+
+.buttons {
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+}
+
+.buttons button {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 1.8rem;
+    height: 100%;
+    width: 40%;
+}
+
+.filter-input button span {
+    color: white;
+}
+
+.bar {
+    background-color: white;
+    height: 5px;
+    width: 50px;
+    margin: 6px 0;
+    transition: 0.8s;
+}
+
+.filter-icon svg {
+    transition: transform 0.5s ease;
+}
+
+.filter-icon.rotated svg {
+    transform: rotate(180deg);
+}
+
+.menu-icon.active .bar:nth-child(1) {
+    transform: rotate(-405deg) translate(-7px, 8px);
+}
+
+.menu-icon.active .bar:nth-child(2) {
+    width: 0;
+    background-color: hsl(240, 65%, 49%);
+}
+
+.menu-icon.active .bar:nth-child(3) {
+    transform: rotate(405deg) translate(-7px, -8px);
+}
+
 /* Tabla */
 
 .dataMenu {
@@ -429,6 +548,15 @@ main button::before {
     background-color: hsl(118, 68%, 50%);
 }
 
+.filter-input .green::before {
+    background-color: hsl(118, 68%, 50%);
+}
+
+.filter-input .red::before {
+    background-color: hsl(0, 68%, 50%);
+}
+
+
 button:hover::before {
     left: 0;
 }
@@ -473,6 +601,11 @@ button:hover::before {
 
     .topnav-filter {
         width: 100%;
+    }
+
+    .topnav-filter-form form {
+        height: 30%;
+        width: 60%;
     }
 
     .dataMenu {
@@ -523,6 +656,12 @@ button:hover::before {
         width: 97%;
     }
 
+    .buttons button {
+        font-size: 1.5rem;
+        height: 150%;
+        width: 40%;
+    }
+
     main {
         margin-bottom: 150px;
     }
@@ -540,6 +679,10 @@ button:hover::before {
 
         .topnav-menu {
             width: 95%;
+        }
+
+        .buttons button {
+            font-size: 1rem;
         }
 
         @media only screen and (max-width: 769px) {
