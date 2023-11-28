@@ -248,7 +248,6 @@ main button {
 .dataMenu-table {
     justify-content: start;
     flex-direction: column;
-    align-items: center;
     height: 100%;
     overflow: scroll;
     display: flex;
@@ -464,9 +463,10 @@ main button {
     cursor: pointer;
 }
 
-ul .selected {
+
+.selected ul{
+    color: white;
     background-color: hsl(216, 100%, 50%);
-    color: whitesmoke;
 }
 
 .area-section {
@@ -500,6 +500,22 @@ form {
 }
 
 #image {
+    display: none;
+}
+
+#image.active {
+    display: flex;
+}
+
+#image.unactive {
+    display: none;
+}
+
+#main.active {
+    display: flex;
+}
+
+#main.unactive {
     display: none;
 }
 
@@ -653,7 +669,7 @@ button:hover::before {
     }
 
     .filter-menu label {
-        font-size: 20px;
+        font-size: 2px;
     }
 
     .dataMenu {
@@ -662,13 +678,15 @@ button:hover::before {
 
     .dataMenu-table {
         justify-content: center;
+        align-items: center;
         width: 100%;
         padding-top: 80px;
         padding-right: 0;
     }
 
     .dataMenu-card {
-        width: 40%;
+        font-size: 15px;
+        width: 80%;
     }
 
     .dataMenu-card-buttons button {
@@ -724,10 +742,6 @@ button:hover::before {
             padding-top: 50px;
         }
 
-        .dataMenu-card {
-            font-size: 15px;
-            width: 80%;
-        }
 
         .topnav-menu {
             width: 95%;
