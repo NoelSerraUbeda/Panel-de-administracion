@@ -2,7 +2,6 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: hsl(195, 53%, 79%);
     position: relative;
-    max-height: 1000px;
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -24,11 +23,6 @@ h4 {
 header {
     position: relative;
     z-index: 8;
-}
-
-header button:hover {
-    transition: transform 0.3s ease, color 0.3s ease;
-    transform: scale(1.05);
 }
 
 main button {
@@ -170,14 +164,13 @@ main button {
     transition: visibility 0s, opacity 0.3s ease;
     background-color: hsla(0, 0%, 0%, 0.7);
     justify-content: center;
-    position: absolute;
+    position: fixed;
     visibility: hidden;
     align-items: start;
-    margin-top: -1%;
     display: none;
-    height: 105vh;
+    height: 100%;
+    width: 100%;
     z-index: 33;
-    width: 110%;
     opacity: 0;
     left: 0;
     top: 0;
@@ -243,23 +236,23 @@ main button {
     display: flex;
 }
 
-.dataMenu-table {
-    justify-content: start;
+.dataMenu-area {
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    overflow: scroll;
     display: flex;
     height: 43rem;
     width: 100%;
 }
 
-.table-area {
+.dataMenu-table {
     justify-content: start;
     flex-direction: column;
     align-items: center;
-    display: flex;
     height: 100%;
-    width: 100%;
+    overflow: scroll;
+    display: flex;
+    width: 80%;
 }
 
 .dataMenu-table::-webkit-scrollbar {
@@ -309,14 +302,14 @@ main button {
 
 .dataMenu-pages {
     background-image: linear-gradient(to bottom, #fff, #f8eedb);
-    width: 91%;
-    height: 3.5rem;
     border: 3px hsl(216, 100%, 50%) solid;
-    border-radius: 15px;
-    display: flex;
     justify-content: space-between;
+    border-radius: 15px;
     padding-right: 30px;
-    margin-right: 35px;
+    margin-right: 90px;
+    height: 3.5rem;
+    display: flex;
+    width: 85%;
 }
 
 .dataMenu-pages ul {
@@ -339,10 +332,9 @@ main button {
     justify-content: center;
     align-items: center;
     visibility: hidden;
-    position: absolute;
-    margin-top: -1%;
+    position: fixed;
     display: flex;
-    height: 105vh;
+    height: 100%;
     width: 100%;
     z-index: 10;
     opacity: 0;
@@ -365,7 +357,7 @@ main button {
     z-index: 12;
 }
 
-.delete-data-form label{
+.delete-data-form label {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     color: hsl(0, 0%, 96%);
     font-weight: bolder;
@@ -558,12 +550,13 @@ textarea:focus {
 
 /* Botones */
 
-.topnav-filter button {
+button:hover {
     transition: transform 0.3s ease, color 0.3s ease;
+    transform: scale(1.05);
 }
 
-.topnav-filter button:hover {
-    transform: scale(1.1);
+.topnav-filter button {
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 main button::before {
@@ -650,13 +643,13 @@ button:hover::before {
 
     .topnav-filter-form {
         height: 105vh;
-
     }
 
     .topnav-filter-form form {
         height: 40%;
         width: 60%;
         margin-left: 0;
+        margin-top: 200px;
     }
 
     .filter-menu label {
@@ -669,10 +662,9 @@ button:hover::before {
 
     .dataMenu-table {
         justify-content: center;
-        flex-direction: row;
-        flex-wrap: wrap;
-        height: 100%;
         width: 100%;
+        padding-top: 80px;
+        padding-right: 0;
     }
 
     .dataMenu-card {
@@ -729,6 +721,7 @@ button:hover::before {
 
         .dataMenu-table {
             flex-direction: column;
+            padding-top: 50px;
         }
 
         .dataMenu-card {
@@ -756,6 +749,7 @@ button:hover::before {
                 justify-content: start;
                 align-items: center;
                 overflow: visible;
+                padding-top: 0px;
             }
 
             .dataMenu-card-buttons button {

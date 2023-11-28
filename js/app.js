@@ -1,4 +1,5 @@
-import './menu.js';
 import './filter.js';
-import './delete.js';
+import './menu.js';
+import './save-erase.js';
+import './table.js';
 
