@@ -118,7 +118,7 @@
                 </div>
                 <div class="dataMenu-form-windows">
                     <ul>
-                        <li id="main-option" class="selected" onclick="principalActive()">Principal</li>
+                        <li id="main-option" onclick="principalActive()">Principal</li>
                         <li id="image-option" onclick="imageActive()">Imágenes</li>
                     </ul>
                 </div>
@@ -245,27 +245,6 @@
                 </div>
             </div>
         </div>
-        <script>
-            function setActive(elementToShow, elementToHide, textToAddClass, textToRemoveClass) {
-                elementToShow.style.display = "flex";
-                elementToHide.style.display = "none";
-                textToAddClass.classList.add("selected");
-                textToRemoveClass.classList.remove("selected");
-            }
-        
-            const main = document.getElementById("main");
-            const image = document.getElementById("image");
-            const principalText = document.getElementById("main-option");
-            const imageText = document.getElementById("image-option");
-        
-            function principalActive() {
-                setActive(main, image, principalText, imageText);
-            }
-        
-            function imageActive() {
-                setActive(image, main, imageText, principalText);
-            }
-        </script>
     </main>
 </body>
 
