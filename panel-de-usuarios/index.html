@@ -27,8 +27,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 
     <!-- Documentos enlazados -->
-    <link rel="stylesheet" href="../css/style.css">
-    <script type="module" src="../js/app.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="module" src="/js/app.js"></script>
 
 </head>
 
@@ -76,12 +76,12 @@
             <div class="topnav-filter">
                 <button class="filter-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <title>triangle-down-outline</title>
+                        <title>Filter</title>
                         <path fill="white" d="M12 22L1 3H23M12 18L19.53 5H4.47" />
                     </svg>
                 </button>
                 <div class="topnav-filter-form">
-                    <form>
+                    <form class="filter-menu">
                         <label>Menu de filtrado</label>
                         <div class="filter-input">
                             <label>Name:</label>
@@ -98,7 +98,7 @@
                     </form>
                 </div>
             </div>
-            <div class="dataMenu-form-buttons">
+            <div class="topnav-form-buttons">
                 <div class="button-panel">
                     <button><svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <title>Delete-Data</title>
@@ -126,29 +126,15 @@
         </div>
         <div class="dataMenu">
             <div class="dataMenu-table">
-                <div class="dataMenu-table">
-
-                    <div class="dataMenu-card">
-                        <div class="dataMenu-card-buttons">
-                            <button class="delete"><svg width="40px" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24">
-                                    <title>Delete</title>
-                                    <path
-                                        d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z"
-                                        fill="white" />
-                                </svg></button>
-                            <button class="edit"><svg width="80px" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24">
-                                    <title>Edit</title>
-                                    <path
-                                        d="M10 20H6V4H13V9H18V12.1L20 10.1V8L14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H10V20M20.2 13C20.3 13 20.5 13.1 20.6 13.2L21.9 14.5C22.1 14.7 22.1 15.1 21.9 15.3L20.9 16.3L18.8 14.2L19.8 13.2C19.9 13.1 20 13 20.2 13M20.2 16.9L14.1 23H12V20.9L18.1 14.8L20.2 16.9Z"
-                                        fill="white" />
-                                </svg></button>
-                        </div>
-                        <div class="dataMenu-card-data">
-                            <h3>NOMBRE: <span>Pedro</span></h3>
-                            <h3>EMAIL: <span>PedroCorreo@gmail.com</span></h3>
-                        </div>
+                <div class="table-area">
+                    <div class="delete-data">
+                        <form class="delete-data-form">
+                            <label>¿Eliminar este registro?</label>
+                            <div class="delete-options">
+                                <button class="green"><span>Si</span></button>
+                                <button class="red"><span>No</span></button>
+                            </div>
+                        </form>
                     </div>
 
                     <div class="dataMenu-card">
@@ -173,7 +159,7 @@
                             <h3>EMAIL: <span>PedroCorreo@gmail.com</span></h3>
                         </div>
                     </div>
-
+                    
                     <div class="dataMenu-card">
                         <div class="dataMenu-card-buttons">
                             <button class="delete"><svg width="40px" xmlns="http://www.w3.org/2000/svg"
@@ -196,53 +182,7 @@
                             <h3>EMAIL: <span>PedroCorreo@gmail.com</span></h3>
                         </div>
                     </div>
-
-                    <div class="dataMenu-card">
-                        <div class="dataMenu-card-buttons">
-                            <button class="delete"><svg width="40px" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24">
-                                    <title>Delete</title>
-                                    <path
-                                        d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z"
-                                        fill="white" />
-                                </svg></button>
-                            <button class="edit"><svg width="80px" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24">
-                                    <title>Edit</title>
-                                    <path
-                                        d="M10 20H6V4H13V9H18V12.1L20 10.1V8L14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H10V20M20.2 13C20.3 13 20.5 13.1 20.6 13.2L21.9 14.5C22.1 14.7 22.1 15.1 21.9 15.3L20.9 16.3L18.8 14.2L19.8 13.2C19.9 13.1 20 13 20.2 13M20.2 16.9L14.1 23H12V20.9L18.1 14.8L20.2 16.9Z"
-                                        fill="white" />
-                                </svg></button>
-                        </div>
-                        <div class="dataMenu-card-data">
-                            <h3>NOMBRE: <span>Pedro</span></h3>
-                            <h3>EMAIL: <span>PedroCorreo@gmail.com</span></h3>
-                        </div>
-                    </div>
-
-                    <div class="dataMenu-card">
-                        <div class="dataMenu-card-buttons">
-                            <button class="delete"><svg width="40px" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24">
-                                    <title>Delete</title>
-                                    <path
-                                        d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z"
-                                        fill="white" />
-                                </svg></button>
-                            <button class="edit"><svg width="80px" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24">
-                                    <title>Edit</title>
-                                    <path
-                                        d="M10 20H6V4H13V9H18V12.1L20 10.1V8L14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H10V20M20.2 13C20.3 13 20.5 13.1 20.6 13.2L21.9 14.5C22.1 14.7 22.1 15.1 21.9 15.3L20.9 16.3L18.8 14.2L19.8 13.2C19.9 13.1 20 13 20.2 13M20.2 16.9L14.1 23H12V20.9L18.1 14.8L20.2 16.9Z"
-                                        fill="white" />
-                                </svg></button>
-                        </div>
-                        <div class="dataMenu-card-data">
-                            <h3>NOMBRE: <span>Pedro</span></h3>
-                            <h3>EMAIL: <span>PedroCorreo@gmail.com</span></h3>
-                        </div>
-                    </div>
-
+                    
                 </div>
                 <div class="dataMenu-pages">
                     <ul>
@@ -257,53 +197,31 @@
             </div>
 
             <div class="dataMenu-form">
-                <div class="dataMenu-form-writter">
+                <div class="dataMenu-form-area">
                     <form id="main">
-                        <div class="writter-section">
+                        <div class="area-section">
                             <label>Name</label>
                             <input type="text">
                         </div>
-                        <div class="writter-section">
+                        <div class="area-section">
                             <label>Email</label>
                             <input type="email">
                         </div>
-                        <div class="writter-section">
+                        <div class="area-section">
                             <label>Password</label>
                             <input type="password">
                         </div>
-                        <div class="writter-section">
+                        <div class="area-section">
                             <label>Repeat Password</label>
                             <input type="password">
                         </div>
                     </form>
                     <form id="image">
                         <div class="gallery">
-
                     </form>
                 </div>
             </div>
         </div>
-        <script>
-            function setActive(elementToShow, elementToHide, textToAddClass, textToRemoveClass) {
-                elementToShow.style.display = "flex";
-                elementToHide.style.display = "none";
-                textToAddClass.classList.add("selected");
-                textToRemoveClass.classList.remove("selected");
-            }
-
-            const main = document.getElementById("main");
-            const image = document.getElementById("image");
-            const principalText = document.getElementById("main-option");
-            const imageText = document.getElementById("image-option");
-
-            function principalActive() {
-                setActive(main, image, principalText, imageText);
-            }
-
-            function imageActive() {
-                setActive(image, main, imageText, principalText);
-            }
-        </script>
 
     </main>
 </body>
