@@ -57,6 +57,14 @@ main button {
     gap: 15px;
 }
 
+.users svg:nth-child(1) {
+    width: 80px;
+}
+
+.users svg:nth-child(3) {
+    width: 50px;
+}
+
 .menu-icon {
     position: relative;
     background: none;
@@ -374,11 +382,11 @@ main button {
     width: 8rem;
 }
 
-.delete-options button.red::before {
+.delete-options button.close::before {
     background-color: hsl(0, 68%, 50%);
 }
 
-.delete-options button.green::before {
+.delete-options button.accept::before {
     background-color: hsl(118, 68%, 50%);
 }
 
@@ -432,20 +440,19 @@ main button {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
     background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
     border: 5px solid hsl(216, 100%, 50%);
-    border-radius: 5px;
-    width: 48rem;
-    overflow: hidden;
-    height: 60%;
     position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 3.3rem;
+    width: 48rem;
 }
 
 .dataMenu-form-windows ul {
-    display: flex;
-    align-items: start;
     justify-content: start;
-    gap: 0px;
-    margin-left: -45px;
+    align-items: start;
     list-style: none;
+    display: flex;
+    padding: 0;
 }
 
 .dataMenu-form-windows li {
@@ -499,6 +506,19 @@ main button {
     display: flex;
     width: 52rem;
     gap: 15px;
+}
+
+#image {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    background: linear-gradient(to left, hsl(211, 100%, 50%), hsl(195, 100%, 50%));
+    border: 5px solid hsl(216, 100%, 50%);
+    border-top-width: 25px;
+    border-radius: 15px;
+    padding-top: 10px;
+    margin-top: 20px;
+    height: 20rem;
+    width: 52rem;
+
 }
 
 .delete-data-form {
@@ -643,19 +663,19 @@ main button::before {
     background-color: hsl(118, 68%, 50%);
 }
 
-.filter-input .green::before {
+.filter-input .accept::before {
     background-color: hsl(118, 68%, 50%);
 }
 
-.green span {
+.accept span {
     color: hsl(0, 0%, 100%);
 }
 
-.red span {
+.close span {
     color: hsl(0, 0%, 100%);
 }
 
-.filter-input .red::before {
+.filter-input .close::before {
     background-color: hsl(0, 68%, 50%);
 }
 

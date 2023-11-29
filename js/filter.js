@@ -1,11 +1,12 @@
 export default (() => {
-    const filterIcon = document.querySelector('.filter-icon');
-    const filterModal = document.querySelector('.topnav-filter-form');
-    const close = document.querySelector('.red');
 
-    filterIcon.addEventListener('click', () => {
+    const filterModal = document.querySelector('.topnav-filter-form');
+    const close = document.querySelector('.filter-input .close');
+
+    document.addEventListener("show-filter-modal", (event => {
         filterModal.classList.toggle('active');
-    });
+    }));
+
     close.addEventListener('click', () => {
         filterModal.classList.toggle('active');
     });

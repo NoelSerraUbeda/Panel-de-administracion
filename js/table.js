@@ -1,16 +1,19 @@
 export default (() => {
+    const filterSection = document.querySelector('.topnav-filter');
+    const tableSection = document.querySelector('.dataMenu-table');
 
-  const tableSection = document.querySelector('.dataMenu-table');
-  const deleteModal = document.querySelector('.delete-data');
-  const close = document.querySelector('.delete-options .red');
+    tableSection?.addEventListener('click', async (event) => {
 
-  tableSection?.addEventListener('click', async (event) => {
+        if (event.target.closest('.delete')) {
+            document.dispatchEvent(new CustomEvent('show-destroy-modal', {}));
+        }
+    });
 
-    if (event.target.closest('.delete')) {
-        deleteModal.classList.toggle('active');
-    }
-  });
-  close.addEventListener('click', () => {
-    deleteModal.classList.toggle('active');
-});
+    filterSection?.addEventListener('click', async (event) => {
+
+        if (event.target.closest('.filter-icon')) {
+            document.dispatchEvent(new CustomEvent('show-filter-modal', {}));
+        }
+    });
+
 })();
