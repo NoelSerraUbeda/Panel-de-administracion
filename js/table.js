@@ -6,7 +6,6 @@ export default (() => {
   tableSection?.addEventListener('click', async (event) => {
 
     if (event.target.closest('.delete')) {
-        event.preventDefault();
         deleteModal.classList.toggle('active');
     }
   });
