@@ -121,7 +121,7 @@ main button {
 }
 
 .topnav-menu.active {
-    height: 50rem;
+    height: 52rem;
 }
 
 
@@ -154,11 +154,10 @@ main button {
     border-radius: 1.5rem;
     align-items: center;
     align-items: start;
-    padding: 0.6rem 2%;
+    padding: 0.4rem 4%;
     margin-right: 15px;
     overflow: hidden;
     margin-left: 5px;
-    margin-top: 5px;
     display: flex;
     width: 100%;
 }
@@ -395,6 +394,46 @@ main button {
     transform: scale(1.05);
 }
 
+/* Pestañas */
+
+.tabs {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
+    border: 5px solid hsl(216, 100%, 50%);
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 3.3rem;
+    width: 48rem;
+}
+
+.tabs ul {
+    justify-content: start;
+    align-items: start;
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.tabs li {
+    color: hsl(216, 100%, 50%);
+    font-weight: 900;
+    padding: 1.2rem 1rem;
+    margin-top: -20px;
+}
+
+.tabs li:hover {
+    background-color: hsl(207, 44%, 49%);
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.tab.selected {
+    background-color: hsl(216, 100%, 50%);
+    pointer-events: none;
+    color: white;
+}
+
 /* Formulario */
 
 .dataMenu-form {
@@ -436,48 +475,6 @@ main button {
     transform: scale(1.05);
 }
 
-.dataMenu-form-windows {
-    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-    background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
-    border: 5px solid hsl(216, 100%, 50%);
-    position: relative;
-    border-radius: 5px;
-    overflow: hidden;
-    height: 3.3rem;
-    width: 48rem;
-}
-
-.dataMenu-form-windows ul {
-    justify-content: start;
-    align-items: start;
-    list-style: none;
-    display: flex;
-    padding: 0;
-}
-
-.dataMenu-form-windows li {
-    color: hsl(216, 100%, 50%);
-    font-weight: 900;
-    padding: 1.2rem 1rem;
-    margin-top: -20px;
-}
-
-.dataMenu-form-windows li:hover {
-    background-color: hsl(207, 44%, 49%);
-    color: whitesmoke;
-    cursor: pointer;
-}
-
-.selected#main-option {
-    background-color: hsl(216, 100%, 50%);
-    color: white;
-}
-
-.selected#image-option {
-    background-color: hsl(216, 100%, 50%);
-    color: white;
-}
-
 .area-section {
     flex-direction: column;
     display: flex;
@@ -516,9 +513,8 @@ main button {
     border-radius: 15px;
     padding-top: 10px;
     margin-top: 20px;
-    height: 20rem;
+    height: 25rem;
     width: 52rem;
-
 }
 
 .delete-data-form {
@@ -564,10 +560,6 @@ main button {
 }
 
 #image {
-    display: none;
-}
-
-#extra {
     display: none;
 }
 
@@ -689,7 +681,7 @@ button:hover::before {
     flex-wrap: wrap;
     display: flex;
     padding: 1rem;
-    height: 20rem;
+    height: 23rem;
 }
 
 .gallery::-webkit-scrollbar {
@@ -711,7 +703,7 @@ button:hover::before {
         overflow-y: visible;
     }
 
-    .dataMenu-form-windows {
+    .dataMenu-form-tabs {
         height: 50px;
         width: 30rem;
     }
@@ -868,7 +860,7 @@ button:hover::before {
             }
 
             .topnav-menu {
-                width: 9;
+                width: 27.5rem;
             }
 
             .dataMenu-form-area {
@@ -878,7 +870,7 @@ button:hover::before {
                 display: flex;
             }
 
-            .dataMenu-form-windows {
+            .dataMenu-form-tabs {
                 display: none;
             }
 
