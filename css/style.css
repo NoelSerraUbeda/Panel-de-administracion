@@ -166,7 +166,7 @@ main button {
     justify-content: center;
     position: fixed;
     visibility: hidden;
-    align-items: start;
+    align-items: center;
     display: none;
     height: 100%;
     width: 100%;
@@ -348,7 +348,6 @@ main button {
 .delete-data-form {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
     flex-direction: column;
-    translate: 0px -109px;
     height: 10rem;
     display: flex;
     width: 25rem;
@@ -462,15 +461,13 @@ main button {
     cursor: pointer;
 }
 
-.selected#main-option
-{
-    background-color:hsl(216, 100%, 50%);
+.selected#main-option {
+    background-color: hsl(216, 100%, 50%);
     color: white;
 }
 
-.selected#image-option
-{
-    background-color:hsl(216, 100%, 50%);
+.selected#image-option {
+    background-color: hsl(216, 100%, 50%);
     color: white;
 }
 
@@ -487,7 +484,7 @@ main button {
     font-size: 22px;
 }
 
-form {
+#main {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
     background: linear-gradient(to left, hsl(211, 100%, 50%), hsl(195, 100%, 50%));
     border: 5px solid hsl(216, 100%, 50%);
@@ -502,6 +499,48 @@ form {
     display: flex;
     width: 52rem;
     gap: 15px;
+}
+
+.delete-data-form {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    background: linear-gradient(to left, hsl(211, 100%, 50%), hsl(195, 100%, 50%));
+    border: 5px solid hsl(216, 100%, 50%);
+    justify-content: center;
+    border-top-width: 25px;
+    padding-bottom: 20px;
+    border-radius: 15px;
+    align-items: center;
+    padding-top: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 15px;
+}
+
+.filter-menu {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    background: linear-gradient(to left, hsl(211, 100%, 50%), hsl(195, 100%, 50%));
+    border: 5px solid hsl(216, 100%, 50%);
+    justify-content: center;
+    border-top-width: 25px;
+    padding-bottom: 20px;
+    border-radius: 15px;
+    align-items: center;
+    padding-top: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    display: flex;
+    width: 30rem;
+    gap: 15px;
+}
+
+.filter-menu input {
+    background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
+    border: 5px solid hsl(39, 67%, 92%);
+    border-radius: 15px;
+    text-align: center;
+    height: 2rem;
+    font-size: 30px;
 }
 
 #image {
