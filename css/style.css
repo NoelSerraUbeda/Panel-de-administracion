@@ -78,10 +78,10 @@ main button {
 
 .bar {
     background-color: white;
+    transition: 0.8s;
+    margin: 6px 0;
     height: 5px;
     width: 50px;
-    margin: 6px 0;
-    transition: 0.8s;
 }
 
 .menu-icon.active .bar:nth-child(1) {
@@ -121,7 +121,7 @@ main button {
 }
 
 .topnav-menu.active {
-    height: 52rem;
+    height: 90vh;
 }
 
 
@@ -132,15 +132,15 @@ main button {
 .topnav-menu-content-card {
     border: 5px solid hsl(211, 100%, 50%);
     background-color: hsl(195, 53%, 79%);
+    border-radius: 25px;
     margin-top: 50px;
     padding: 10px;
-    border-radius: 25px;
     width: 33%;
 }
 
 .main-topbar {
-    display: flex;
     justify-content: space-between;
+    display: flex;
 }
 
 /* Filtrador */
@@ -163,8 +163,8 @@ main button {
 }
 
 .topbar-filter svg {
-    width: 30px;
     height: 40px;
+    width: 30px;
 }
 
 .topbar-filter-form {
@@ -219,8 +219,8 @@ main button {
 
 .filter-input.buttons {
     justify-content: space-around;
-    align-items: center;
     flex-direction: row;
+    align-items: center;
     display: flex;
     width: 100%;
 }
@@ -228,9 +228,9 @@ main button {
 .filter-input.buttons button {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-size: 1.8rem;
+    padding: 0.2rem;
     height: 100%;
     width: 40%;
-    padding: 0.2rem;
 }
 
 /* Contenido principal */
@@ -242,8 +242,8 @@ main button {
 }
 
 .crud-area {
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     display: flex;
     height: 43rem;
@@ -253,9 +253,9 @@ main button {
 .crud-table {
     justify-content: start;
     flex-direction: column;
-    height: 100%;
     overflow: scroll;
     display: flex;
+    height: 100%;
     width: 80%;
 }
 
@@ -271,7 +271,7 @@ main button {
     border-top-width: 10px;
     border-radius: 15px;
     text-indent: 20px;
-    font-size: 17px;
+    font-size: 19px;
     margin: 10px;
     width: 700px;
 }
@@ -309,7 +309,7 @@ main button {
     border: 3px hsl(216, 100%, 50%) solid;
     justify-content: space-between;
     border-radius: 15px;
-    padding-right: 30px;
+    padding-right: 40px;
     margin-right: 90px;
     height: 3.5rem;
     display: flex;
@@ -322,8 +322,7 @@ main button {
     list-style: none;
 }
 
-.actual-page 
-{
+.actual-page {
     color: hsl(216, 100%, 50%);
     font-weight: 900;
 }
@@ -416,9 +415,9 @@ main button {
 
 .tabs li {
     color: hsl(216, 100%, 50%);
-    font-weight: 900;
     padding: 1.2rem 1rem;
     margin-top: -20px;
+    font-weight: 900;
 }
 
 .tabs li:hover {
@@ -438,7 +437,7 @@ main button {
 .crud-form {
     flex-direction: column;
     display: flex;
-    margin-right: 60px;
+    margin-right: 80px;
 }
 
 .crud-form-area {
@@ -449,12 +448,12 @@ main button {
 }
 
 .topbar-form-button {
-    margin-bottom: 10px;
+    flex-direction: row-reverse;
     justify-content: end;
     align-items: center;
+    margin-bottom: 10px;
     display: flex;
     gap: 30px;
-    flex-direction: row-reverse;
 }
 
 .button-panel {
@@ -487,24 +486,42 @@ main button {
     font-size: 22px;
 }
 
-#principal {
+.crud-form form {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
     background: linear-gradient(to left, hsl(211, 100%, 50%), hsl(195, 100%, 50%));
     border: 5px solid hsl(216, 100%, 50%);
     justify-content: center;
     border-top-width: 25px;
-    padding-bottom: 20px;
     border-radius: 15px;
+}
+
+.tab-content {
+    justify-content: center;
+    padding-bottom: 20px;
     align-items: center;
     padding-top: 10px;
     margin-top: 20px;
     flex-wrap: wrap;
-    display: flex;
+    display: none;
     width: 52rem;
     gap: 15px;
 }
 
-#image {
+.tab-content.active{
+    display: flex;
+}
+
+input[type="file"] {
+    background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
+    border: 5px solid hsl(39, 67%, 92%);
+    text-align: center;
+    border-radius: 5px;
+    font-size: 22px;
+    height: 2rem;
+    width: 46rem;
+}
+
+.image {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
     background: linear-gradient(to left, hsl(211, 100%, 50%), hsl(195, 100%, 50%));
     border: 5px solid hsl(216, 100%, 50%);
@@ -554,28 +571,8 @@ main button {
     border: 5px solid hsl(39, 67%, 92%);
     border-radius: 15px;
     text-align: center;
-    height: 2rem;
     font-size: 30px;
-}
-
-#image {
-    display: none;
-}
-
-#image.active {
-    display: flex;
-}
-
-#image.unactive {
-    display: none;
-}
-
-#principal.active {
-    display: flex;
-}
-
-#principal.unactive {
-    display: none;
+    height: 2rem;
 }
 
 form input,
@@ -600,10 +597,6 @@ textarea {
     width: 98.8%;
 }
 
-input:focus {
-    border: 5px solid hsl(216, 100%, 50%);
-}
-
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -611,16 +604,21 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 textarea {
-    padding: 10px;
     box-sizing: border-box;
     text-align: start;
+    padding: 10px;
     height: 150px;
     resize: none;
     width: 100%;
 }
 
+input:focus,
 textarea:focus {
     border: 5px solid hsl(216, 100%, 50%);
+}
+
+.error,.error:focus {
+    border: 5px solid red;
 }
 
 /* Botones */
@@ -630,13 +628,9 @@ button:hover {
     transform: scale(1.05);
 }
 
-.topbar-filter button {
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
 main button::before {
-    transition: left 0.2s ease-in-out;
     background-color: hsl(207, 44%, 49%);
+    transition: left 0.2s ease-in-out;
     position: absolute;
     height: 100%;
     content: '';
@@ -702,11 +696,6 @@ button:hover::before {
         overflow-y: visible;
     }
 
-    .crud-form-tabs {
-        height: 50px;
-        width: 30rem;
-    }
-
     .topnav h1,
     h4 {
         display: none;
@@ -750,6 +739,7 @@ button:hover::before {
     }
 
     .crud-form {
+        margin-top: 20px;
         height: 100%;
         width: 100%;
     }
@@ -757,7 +747,6 @@ button:hover::before {
     form {
         margin-bottom: 130px;
         margin-top: 10px;
-        width: 900px;
         margin: 5px;
         gap: 20px;
     }
@@ -797,6 +786,10 @@ button:hover::before {
             padding-top: 50px;
         }
 
+        .tabs {
+            width: 30rem;
+        }
+
 
         .topnav-menu {
             width: 95%;
@@ -816,9 +809,14 @@ button:hover::before {
 
             .crud-table {
                 justify-content: start;
-                align-items: center;
-                overflow: visible;
-                padding-top: 0px;
+                overflow: scroll;
+                padding-top: 10px;
+                height: 60%;
+            }
+
+            .crud-area {
+                justify-content: start;
+                margin-bottom: -200px;
             }
 
             .crud-card-buttons button {
@@ -837,10 +835,20 @@ button:hover::before {
                 margin-top: 20px;
             }
 
-            form input {
-                font-size: 20px;
-                height: 30px;
-                width: 180px;
+            .tab-content {
+                justify-content: center;
+                padding-bottom: 20px;
+                align-items: center;
+                padding-top: 10px;
+                margin-top: 20px;
+                flex-wrap: wrap;
+                width: 25rem;
+                gap: 15px;
+            }
+
+            input[type="file"] {
+
+                width: 22rem;
             }
 
             .filter-input.buttons button {
@@ -869,7 +877,7 @@ button:hover::before {
                 display: flex;
             }
 
-            .crud-form-tabs {
+            .tabs {
                 display: none;
             }
 
