@@ -200,21 +200,24 @@
                             </div>
                             <div class="form-section">
                                 <label for="email">Email</label>
-                                <input type="email">
+                                <input type="email" data-mail>
                             </div>
                             <div class="form-section">
                                 <label for="password">Password</label>
-                                <input type="password" required data-minlength="8">
+                                <input type="password" class="validate" data-minlength="8">
                             </div>
                             <div class="form-section">
                                 <label for="repeat-password">Repeat Password</label>
-                                <input type="password" required data-minlength="8">
+                                <input type="password" data-minlength="8">
                             </div>
                         </div>
                         <div class="tab-content" data-tab="images">
                             <div class="form-section">
                                 <label for="avatar">Avatar</label>
-                                <input id="avatar" type="file">
+                                <input id="avatar" type="file" accept="image" onchange="previewImage()">
+                            </div>
+                            <div id="image-container">
+
                             </div>
                         </div>
                     </form>
@@ -222,6 +225,24 @@
             </div>
         </div>
     </main>
+    <script>
+        function previewImage() {
+            const input = document.getElementById('avatar');
+            const container = document.getElementById('image-container');
+
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+    
+                reader.onload = function (e) {
+                    const image = document.createElement('img');
+                    image.src = e.target.result;
+                    container.innerHTML = '';
+                    container.appendChild(image);
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
 </body>
 
 </html>
