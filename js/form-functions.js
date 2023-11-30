@@ -1,6 +1,6 @@
 export default (() => {
-    const sendData = document.querySelector('.save');
-    const eraseData = document.querySelector('.erase');
+    const sendData = document.querySelector('.save-button');
+    const eraseData = document.querySelector('.erase-button');
     const name = document.getElementById('name');
     const email = document.getElementById('mail');
     const pass = document.getElementById('pass');

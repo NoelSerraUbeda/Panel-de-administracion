@@ -1,6 +1,6 @@
 export default (() => {
-    const filterSection = document.querySelector('.topnav-filter');
-    const tableSection = document.querySelector('.dataMenu-table');
+    const filterSection = document.querySelector('.topbar-filter');
+    const tableSection = document.querySelector('.crud-table');
 
     tableSection?.addEventListener('click', async (event) => {
 

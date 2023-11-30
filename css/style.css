@@ -51,17 +51,17 @@ main button {
     margin: 5px;
 }
 
-.users {
+.topnav-users {
     display: flex;
     width: 30rem;
     gap: 15px;
 }
 
-.users svg:nth-child(1) {
+.topnav-users svg:nth-child(1) {
     width: 80px;
 }
 
-.users svg:nth-child(3) {
+.topnav-users svg:nth-child(3) {
     width: 50px;
 }
 
@@ -145,7 +145,7 @@ main button {
 
 /* Filtrador */
 
-.topnav-filter {
+.topbar-filter {
     border: 5px solid hsl(216, 100%, 50%);
     background-color: hsl(39, 67%, 92%);
     transition: height 0.5s ease;
@@ -162,34 +162,33 @@ main button {
     width: 100%;
 }
 
-.topnav-filter svg {
+.topbar-filter svg {
     width: 30px;
     height: 40px;
 }
 
-.topnav-filter-form {
+.topbar-filter-form {
     transition: visibility 0s, opacity 0.3s ease;
     background-color: hsla(0, 0%, 0%, 0.7);
     justify-content: center;
-    position: fixed;
-    visibility: hidden;
     align-items: center;
-    display: none;
+    visibility: hidden;
+    position: fixed;
+    display: flex;
     height: 100%;
     width: 100%;
     z-index: 33;
     opacity: 0;
     left: 0;
     top: 0;
-    display: flex;
 }
 
-.topnav-filter-form.active {
+.topbar-filter-form.active {
     visibility: visible;
     opacity: 1;
 }
 
-.topnav-filter-form form {
+.topbar-filter-form form {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
     flex-direction: column;
     font-display: flex;
@@ -199,7 +198,7 @@ main button {
     z-index: 33;
 }
 
-.topnav-filter-form label {
+.topbar-filter-form label {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     color: hsl(0, 0%, 96%);
     font-weight: bolder;
@@ -238,11 +237,11 @@ main button {
 
 /* Tabla */
 
-.dataMenu {
+.crud {
     display: flex;
 }
 
-.dataMenu-area {
+.crud-area {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -251,7 +250,7 @@ main button {
     width: 100%;
 }
 
-.dataMenu-table {
+.crud-table {
     justify-content: start;
     flex-direction: column;
     height: 100%;
@@ -260,11 +259,11 @@ main button {
     width: 80%;
 }
 
-.dataMenu-table::-webkit-scrollbar {
+.crud-table::-webkit-scrollbar {
     display: none;
 }
 
-.dataMenu-card {
+.crud-card {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
     background-image: linear-gradient(to bottom, #fff, #f8eedb);
     border: 5px solid hsl(216, 100%, 50%);
@@ -277,7 +276,7 @@ main button {
     width: 700px;
 }
 
-.dataMenu-card-buttons {
+.crud-card-buttons {
     flex-direction: row-reverse;
     margin-bottom: 20px;
     border-radius: 15px;
@@ -286,7 +285,7 @@ main button {
     gap: 5px;
 }
 
-.dataMenu-card-buttons button {
+.crud-card-buttons button {
     background-color: hsl(216, 100%, 50%);
     justify-content: center;
     border-radius: 15px;
@@ -300,12 +299,12 @@ main button {
     width: 50px;
 }
 
-.dataMenu-card-buttons button:hover {
+.crud-card-buttons button:hover {
     transition: transform 0.3s ease, color 0.3s ease;
     transform: scale(1.05);
 }
 
-.dataMenu-pages {
+.crud-pages {
     background-image: linear-gradient(to bottom, #fff, #f8eedb);
     border: 3px hsl(216, 100%, 50%) solid;
     justify-content: space-between;
@@ -317,21 +316,21 @@ main button {
     width: 85%;
 }
 
-.dataMenu-pages ul {
+.crud-pages ul {
     display: flex;
     gap: 10px;
     list-style: none;
 }
 
-.actual-page {
-    font-weight: 900;
-    text-decoration: underline;
+.actual-page 
+{
     color: hsl(216, 100%, 50%);
+    font-weight: 900;
 }
 
 /* Formulario para borrar entradas */
 
-.delete-data {
+.delete-area {
     transition: visibility 0s, opacity 0.3s ease;
     background-color: hsla(0, 0%, 0%, 0.7);
     justify-content: center;
@@ -347,12 +346,12 @@ main button {
     top: 0;
 }
 
-.delete-data.active {
+.delete-area.active {
     visibility: visible;
     opacity: 1;
 }
 
-.delete-data-form {
+.delete-area-form {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
     flex-direction: column;
     height: 10rem;
@@ -361,7 +360,7 @@ main button {
     z-index: 12;
 }
 
-.delete-data-form label {
+.delete-area-form label {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     color: hsl(0, 0%, 96%);
     font-weight: bolder;
@@ -436,20 +435,20 @@ main button {
 
 /* Formulario */
 
-.dataMenu-form {
+.crud-form {
     flex-direction: column;
     display: flex;
     margin-right: 60px;
 }
 
-.dataMenu-form-area {
+.crud-form-area {
     justify-content: center;
     flex-direction: column;
     align-items: center;
     display: flex;
 }
 
-.topnav-form-buttons {
+.topbar-form-button {
     margin-bottom: 10px;
     justify-content: end;
     align-items: center;
@@ -462,7 +461,7 @@ main button {
     display: flex;
 }
 
-.topnav-form-buttons button {
+.topbar-form-button button {
     margin-right: 20px;
     cursor: pointer;
     border: none;
@@ -470,17 +469,17 @@ main button {
     width: 70px;
 }
 
-.topnav-form-buttons button:hover {
+.topbar-form-button button:hover {
     transition: transform 0.3s ease, color 0.3s ease;
     transform: scale(1.05);
 }
 
-.area-section {
+.form-section {
     flex-direction: column;
     display: flex;
 }
 
-.area-section label {
+.form-section label {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     color: hsl(0, 0%, 96%);
     font-weight: bolder;
@@ -488,7 +487,7 @@ main button {
     font-size: 22px;
 }
 
-#main {
+#principal {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
     background: linear-gradient(to left, hsl(211, 100%, 50%), hsl(195, 100%, 50%));
     border: 5px solid hsl(216, 100%, 50%);
@@ -517,7 +516,7 @@ main button {
     width: 52rem;
 }
 
-.delete-data-form {
+.delete-area-form {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
     background: linear-gradient(to left, hsl(211, 100%, 50%), hsl(195, 100%, 50%));
     border: 5px solid hsl(216, 100%, 50%);
@@ -571,11 +570,11 @@ main button {
     display: none;
 }
 
-#main.active {
+#principal.active {
     display: flex;
 }
 
-#main.unactive {
+#principal.unactive {
     display: none;
 }
 
@@ -631,7 +630,7 @@ button:hover {
     transform: scale(1.05);
 }
 
-.topnav-filter button {
+.topbar-filter button {
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -703,7 +702,7 @@ button:hover::before {
         overflow-y: visible;
     }
 
-    .dataMenu-form-tabs {
+    .crud-form-tabs {
         height: 50px;
         width: 30rem;
     }
@@ -713,11 +712,11 @@ button:hover::before {
         display: none;
     }
 
-    .topnav-filter {
+    .topbar-filter {
         width: 100%;
     }
 
-    .topnav-filter-form form {
+    .topbar-filter-form form {
         height: 50%;
         width: 60%;
         margin-left: 0;
@@ -728,11 +727,11 @@ button:hover::before {
         font-size: 20px;
     }
 
-    .dataMenu {
+    .crud {
         flex-direction: column;
     }
 
-    .dataMenu-table {
+    .crud-table {
         justify-content: center;
         align-items: center;
         width: 100%;
@@ -740,17 +739,17 @@ button:hover::before {
         padding-right: 0;
     }
 
-    .dataMenu-card {
+    .crud-card {
         font-size: 15px;
         width: 80%;
     }
 
-    .dataMenu-card-buttons button {
+    .crud-card-buttons button {
         height: 40px;
         width: 40px;
     }
 
-    .dataMenu-form {
+    .crud-form {
         height: 100%;
         width: 100%;
     }
@@ -768,7 +767,7 @@ button:hover::before {
         height: 30px;
     }
 
-    .area-section label {
+    .form-section label {
         font-size: 18px;
         text-indent: 0;
     }
@@ -777,7 +776,7 @@ button:hover::before {
         width: 97%;
     }
 
-    .dataMenu-pages {
+    .crud-pages {
         margin-right: 0;
     }
 
@@ -793,7 +792,7 @@ button:hover::before {
 
     @media only screen and (max-width: 1280px) {
 
-        .dataMenu-table {
+        .crud-table {
             flex-direction: column;
             padding-top: 50px;
         }
@@ -809,26 +808,26 @@ button:hover::before {
 
         @media only screen and (max-width: 769px) {
 
-            .dataMenu-card {
+            .crud-card {
                 font-size: 13px;
                 width: 80%;
                 margin-left: 0;
             }
 
-            .dataMenu-table {
+            .crud-table {
                 justify-content: start;
                 align-items: center;
                 overflow: visible;
                 padding-top: 0px;
             }
 
-            .dataMenu-card-buttons button {
+            .crud-card-buttons button {
                 border-radius: 5px;
                 height: 35px;
                 width: 35px;
             }
 
-            .topnav-form-buttons {
+            .topbar-form-button {
                 margin-bottom: 0px;
             }
 
@@ -854,7 +853,7 @@ button:hover::before {
                 text-indent: 0;
             }
 
-            .dataMenu-card-data {
+            .crud-card-data {
                 margin-top: 20px;
                 font-size: 11px;
             }
@@ -863,14 +862,14 @@ button:hover::before {
                 width: 27.5rem;
             }
 
-            .dataMenu-form-area {
+            .crud-form-area {
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
                 display: flex;
             }
 
-            .dataMenu-form-tabs {
+            .crud-form-tabs {
                 display: none;
             }
 

@@ -1,6 +1,6 @@
 export default (() => {
 
-    const deleteModal = document.querySelector('.delete-data');
+    const deleteModal = document.querySelector('.delete-area');
     const close = document.querySelector('.delete-options .close');
 
     document.addEventListener("show-destroy-modal", (event => {
