@@ -507,7 +507,7 @@ main button {
     gap: 15px;
 }
 
-.tab-content.active{
+.tab-content.active {
     display: flex;
 }
 
@@ -617,7 +617,8 @@ textarea:focus {
     border: 5px solid hsl(216, 100%, 50%);
 }
 
-.error,.error:focus {
+.error,
+.error:focus {
     border: 5px solid red;
 }
 
@@ -688,6 +689,44 @@ button:hover::before {
     margin: 0.5rem;
     width: 300px;
     height: auto;
+}
+
+.custom-file-input {
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-file-input input {
+    position: absolute;
+    font-size: 100px;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.custom-file-input label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4.5rem 0;
+    background-color: hsl(216, 100%, 50%);
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.custom-file-input svg {
+    cursor: pointer;
+    z-index: 7;
+    width: 40%;
+    fill: white;
+}
+
+.custom-file-input label:hover {
+    background-color: #2980b9;
 }
 
 @media only screen and (max-width: 1550px) {
