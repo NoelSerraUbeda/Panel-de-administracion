@@ -14,11 +14,6 @@ class Menu extends HTMLElement {
 
             <style>
                 
-                header {
-                    position: relative;
-                    
-                }
-
                 .menu-icon {
                     position: relative;
                     background: none;
@@ -64,6 +59,7 @@ class Menu extends HTMLElement {
                     width: 98%;
                     left: 10px;
                     top: 60px;
+                    z-index:-1;
                 }
 
                 .topnav-menu-content {
@@ -85,15 +81,30 @@ class Menu extends HTMLElement {
                 }
 
                 .topnav-menu-content-card {
-                    border: 5px solid hsl(211, 100%, 50%);
-                    background-color: hsl(195, 53%, 79%);
-                    border-radius: 25px;
-                    margin-top: 50px;
-                    padding: 10px;
-                    width: 33%;
+                    
                 }
 
+                @media only screen and (max-width: 1550px) {
 
+                    .topnav-menu {
+                        width: 97%;
+                    }
+
+                    @media only screen and (max-width: 1280px) {
+
+                        .topnav-menu {
+                            width: 90%;
+                        }
+
+                        @media only screen and (max-width: 769px) {
+
+                            .topnav-menu {
+                                width: 0rem;
+                            }
+                        }
+                    }
+                
+                }
             </style>
 
             <nav>
@@ -105,13 +116,7 @@ class Menu extends HTMLElement {
             </nav>
             <div class="topnav-menu">
                 <div class="topnav-menu-content">
-                    <div class="topnav-menu-content-card">
-                        <h2>Contenido</h2>
-                    </div>
-
-                    <div class="topnav-menu-content-card">
-                        <h2>Contenido</h2>
-                    </div>
+                
                 </div>
             </div>
         `

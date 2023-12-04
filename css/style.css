@@ -13,7 +13,11 @@ h1 {
     font-size: 3.5rem;
     font-weight: 900;
     left: 32%;
-    top:0;
+}
+
+header {
+    position: relative;
+    z-index: 8;
 }
 
 main button {
@@ -28,13 +32,8 @@ main button {
 }
 
 /* Encabezado */
-
-.main-topbar {
-    justify-content: space-between;
-    display: flex;
-}
-
 .topnav {
+
     position: relative;
     border: 8px solid hsl(216, 100%, 50%)6ff;
     background-color: hsl(240, 65%, 49%);
@@ -45,6 +44,11 @@ main button {
     padding-left: 20px;
     display: flex;
     margin: 5px;
+}
+
+.main-topbar {
+    justify-content: space-between;
+    display: flex;
 }
 
 /* Filtrador */
@@ -621,7 +625,7 @@ button:hover::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2.5rem 0rem 2.5rem 0rem;
+    padding: 4.5rem 0;
     background-color: hsl(216, 100%, 50%);
     border-radius: 15px;
     font-size: 16px;
@@ -630,7 +634,6 @@ button:hover::before {
 
 .custom-file-input svg {
     cursor: pointer;
-    z-index: 7;
     width: 40%;
     fill: white;
 }
@@ -710,10 +713,6 @@ button:hover::before {
         text-indent: 0;
     }
 
-    .topnav-menu {
-        width: 97%;
-    }
-
     .crud-pages {
         margin-right: 0;
     }
@@ -737,11 +736,6 @@ button:hover::before {
 
         .tabs {
             width: 30rem;
-        }
-
-
-        .topnav-menu {
-            width: 95%;
         }
 
         .buttons button {
@@ -815,9 +809,6 @@ button:hover::before {
                 font-size: 11px;
             }
 
-            .topnav-menu {
-                width: 27.5rem;
-            }
 
             .crud-form-area {
                 flex-direction: row;
@@ -840,3 +831,6 @@ button:hover::before {
         }
     }
 }
+
+
+
