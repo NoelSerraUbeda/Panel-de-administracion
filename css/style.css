@@ -53,7 +53,7 @@ main button {
 
 /* Filtrador */
 
-.filter-icon{
+.filter-icon {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
     transition: background-color 0.2s ease-in-out;
     background-color: hsl(216, 100%, 50%);
@@ -559,24 +559,8 @@ button:hover::before {
         overflow-y: visible;
     }
 
-    .topnav h1,
-    h4 {
+    .topnav h1 {
         display: none;
-    }
-
-    .topbar-filter {
-        width: 100%;
-    }
-
-    .topbar-filter-form form {
-        height: 50%;
-        width: 60%;
-        margin-left: 0;
-        margin-top: 200px;
-    }
-
-    .filter-menu label {
-        font-size: 20px;
     }
 
     .crud {
@@ -587,18 +571,6 @@ button:hover::before {
         justify-content: center;
         align-items: center;
         width: 100%;
-        padding-top: 80px;
-        padding-right: 0;
-    }
-
-    .crud-card {
-        font-size: 15px;
-        width: 80%;
-    }
-
-    .crud-card-buttons button {
-        height: 40px;
-        width: 40px;
     }
 
     .crud-form {
@@ -607,141 +579,55 @@ button:hover::before {
         width: 100%;
     }
 
-    form {
-        margin-bottom: 130px;
-        margin-top: 10px;
-        margin: 5px;
-        gap: 20px;
-    }
-
-    form input {
-        width: 350px;
-        height: 30px;
-    }
-
-    .form-section label {
-        font-size: 18px;
-        text-indent: 0;
-    }
-
     .crud-pages {
         margin-right: 0;
     }
 
-    .buttons button {
-        font-size: 1.5rem;
-        height: 150%;
-        width: 20%;
-    }
-
-    main {
-        margin-bottom: 150px;
-    }
-
-    @media only screen and (max-width: 1280px) {
-
-        .crud-table {
-            flex-direction: column;
-            padding-top: 50px;
-        }
-
-        .tabs {
-            width: 30rem;
-        }
-
-        .buttons button {
-            font-size: 1rem;
-        }
-
-        @media only screen and (max-width: 769px) {
-
-            .crud-card {
-                font-size: 13px;
-                width: 80%;
-                margin-left: 0;
-            }
-
-            .crud-table {
-                justify-content: start;
-                overflow: scroll;
-                padding-top: 10px;
-                height: 60%;
-            }
-
-            .crud-area {
-                justify-content: start;
-                margin-bottom: -200px;
-            }
-
-            .crud-card-buttons button {
-                border-radius: 5px;
-                height: 35px;
-                width: 35px;
-            }
-
-            .topbar-form-button {
-                margin-bottom: 0px;
-            }
-
-            form {
-                margin-bottom: 15px;
-                flex-direction: row;
-                margin-top: 20px;
-            }
-
-            .tab-content {
-                justify-content: center;
-                padding-bottom: 20px;
-                align-items: center;
-                padding-top: 10px;
-                margin-top: 20px;
-                flex-wrap: wrap;
-                width: 25rem;
-                gap: 15px;
-            }
-
-            input[type="file"] {
-
-                width: 22rem;
-            }
-
-            .filter-input.buttons button {
-                font-size: 1.2rem;
-                height: 3rem;
-            }
-
-            .row-input label {
-                font-size: 15px;
-                text-indent: 0;
-            }
-
-            .crud-card-data {
-                margin-top: 20px;
-                font-size: 11px;
-            }
-
-
-            .crud-form-area {
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                display: flex;
-            }
-
-            .tabs {
-                display: none;
-            }
-
-            .gallery img {
-                width: 400px;
-            }
-
-            main {
-                margin-bottom: 90px;
-            }
-        }
-    }
 }
 
+@media only screen and (max-width: 769px) {
 
+    .crud-card {
+        font-size: 13px;
+        width: 80%;
+        margin-left: 0;
+    }
 
+    .crud-table {
+        justify-content: start;
+        overflow: scroll;
+        padding-top: 10px;
+        height: 60%;
+    }
+
+    .crud-area {
+        justify-content: start;
+        margin-bottom: -200px;
+    }
+
+    .crud-card-buttons button {
+        border-radius: 10px;
+        height: 40px;
+        width: 40px;
+    }
+
+    .topbar-form-button {
+        margin-bottom: 0px;
+    }
+
+    .tab-content {
+        justify-content: center;
+        padding-bottom: 20px;
+        align-items: center;
+        padding-top: 10px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+        width: 25rem;
+        gap: 15px;
+    }
+
+    .tabs {
+        display: none;
+    }
+
+}
