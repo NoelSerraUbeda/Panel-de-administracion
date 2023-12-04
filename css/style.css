@@ -53,6 +53,17 @@ main button {
 
 /* Filtrador */
 
+.filter-icon{
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    transition: background-color 0.2s ease-in-out;
+    background-color: hsl(216, 100%, 50%);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+}
+
 .topbar-filter {
     border: 5px solid hsl(216, 100%, 50%);
     background-color: hsl(39, 67%, 92%);
@@ -67,78 +78,12 @@ main button {
     overflow: hidden;
     margin-left: 5px;
     display: flex;
-    width: 100%;
+    width: 52rem;
 }
 
 .topbar-filter svg {
     height: 40px;
     width: 30px;
-}
-
-.topbar-filter-form {
-    transition: visibility 0s, opacity 0.3s ease;
-    background-color: hsla(0, 0%, 0%, 0.7);
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    position: fixed;
-    display: flex;
-    height: 100%;
-    width: 100%;
-    z-index: 33;
-    opacity: 0;
-    left: 0;
-    top: 0;
-}
-
-.topbar-filter-form.active {
-    visibility: visible;
-    opacity: 1;
-}
-
-.topbar-filter-form form {
-    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-    flex-direction: column;
-    font-display: flex;
-    margin-top: 10%;
-    width: 30.1%;
-    height: 40%;
-    z-index: 33;
-}
-
-.topbar-filter-form label {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    color: hsl(0, 0%, 96%);
-    font-weight: bolder;
-    text-indent: 10px;
-    font-size: 32px;
-}
-
-.filter-input {
-    flex-direction: column;
-    margin-bottom: 1rem;
-    display: flex;
-    width: 80%;
-}
-
-.filter-input input {
-    width: 100%;
-}
-
-.filter-input.buttons {
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: center;
-    display: flex;
-    width: 100%;
-}
-
-.filter-input.buttons button {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    font-size: 1.8rem;
-    padding: 0.2rem;
-    height: 100%;
-    width: 40%;
 }
 
 /* Contenido principal */
@@ -458,32 +403,6 @@ input[type="file"] {
     gap: 15px;
 }
 
-.filter-menu {
-    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-    background: linear-gradient(to left, hsl(211, 100%, 50%), hsl(195, 100%, 50%));
-    border: 5px solid hsl(216, 100%, 50%);
-    justify-content: center;
-    border-top-width: 25px;
-    padding-bottom: 20px;
-    border-radius: 15px;
-    align-items: center;
-    padding-top: 10px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-    display: flex;
-    width: 30rem;
-    gap: 15px;
-}
-
-.filter-menu input {
-    background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
-    border: 5px solid hsl(39, 67%, 92%);
-    border-radius: 15px;
-    text-align: center;
-    font-size: 30px;
-    height: 2rem;
-}
-
 form input,
 textarea {
     background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
@@ -538,6 +457,14 @@ textarea:focus {
 
 /* Botones */
 
+.accept span {
+    color: hsl(0, 0%, 100%);
+}
+
+.close span {
+    color: hsl(0, 0%, 100%);
+}
+
 button:hover {
     transition: transform 0.3s ease, color 0.3s ease;
     transform: scale(1.05);
@@ -561,22 +488,6 @@ main button::before {
 
 .edit::before {
     background-color: hsl(118, 68%, 50%);
-}
-
-.filter-input .accept::before {
-    background-color: hsl(118, 68%, 50%);
-}
-
-.accept span {
-    color: hsl(0, 0%, 100%);
-}
-
-.close span {
-    color: hsl(0, 0%, 100%);
-}
-
-.filter-input .close::before {
-    background-color: hsl(0, 68%, 50%);
 }
 
 button:hover::before {

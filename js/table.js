@@ -12,7 +12,7 @@ export default (() => {
     filterSection?.addEventListener('click', async (event) => {
 
         if (event.target.closest('.filter-icon')) {
-            document.dispatchEvent(new CustomEvent('show-filter-modal', {}));
+            document.dispatchEvent(new CustomEvent('show-filter-modal'));
         }
     });
 
