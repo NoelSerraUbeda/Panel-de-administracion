@@ -16,6 +16,22 @@ export default (() => {
         return allValid;
     };
 
+    const applyValidationClass = () => {
+        const allFields = document.querySelectorAll('[data-minlength], [data-onlyletters], [data-mail]');
+
+        allFields.forEach(input => {
+            const isValid = !(input.classList.contains('error')) && input.value.trim() !== '';
+            input.classList.toggle('valid', isValid);
+        });
+    };
+
+    // Restaurar las clases cuando se modifica el contenido
+    document.querySelectorAll('[data-minlength], [data-onlyletters], [data-mail]').forEach(input => {
+        input?.addEventListener('input', () => {
+            applyValidationClass();
+        });
+    });
+
     // Función para obtener los datos de nombre y correo
     const getFormData = () => {
         const nombreInput = document.querySelector('[data-onlyletters]');
@@ -32,6 +48,7 @@ export default (() => {
         input?.addEventListener('input', () => {
             const valid = input.value.length >= input.getAttribute('data-minlength') || input.value.length === 0;
             input.classList.toggle('error', !valid);
+            applyValidationClass();
         });
     });
 
@@ -40,6 +57,7 @@ export default (() => {
         input?.addEventListener('input', () => {
             const valid = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+$/u.test(input.value) || input.value.length === 0;
             input.classList.toggle('error', !valid);
+            applyValidationClass();
         });
     });
 
@@ -49,6 +67,7 @@ export default (() => {
             const emailRegex = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ0-9._-]*@[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+(\.[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+)+$/u;
             const valid = emailRegex.test(input.value) || input.value.length === 0;
             input.classList.toggle('error', !valid);
+            applyValidationClass();
         });
     });
 

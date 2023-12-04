@@ -493,6 +493,7 @@ main button {
     justify-content: center;
     border-top-width: 25px;
     border-radius: 15px;
+    margin-top: 5px;
 }
 
 .tab-content {
@@ -620,6 +621,11 @@ textarea:focus {
 .error,
 .error:focus {
     border: 5px solid red;
+}
+
+.valid,
+.valid:focus {
+    border: 5px solid green;
 }
 
 /* Botones */
