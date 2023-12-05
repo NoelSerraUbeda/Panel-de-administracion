@@ -678,7 +678,7 @@ button:hover::before {
     flex-wrap: wrap;
     padding: 20px;
     display: none;
-    right: -40%;
+    right: -50rem;
     bottom: 0%;
     display: flex;
     transition: transform 0.5s ease; 
@@ -690,7 +690,7 @@ button:hover::before {
 }
 
 .messageContainer.active {
-    transform: translate(-50rem); 
+    transform: translate(-51rem); 
 }
 
 @media only screen and (max-width: 1550px) {
