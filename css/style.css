@@ -693,15 +693,6 @@ button:hover::before {
     transform: translate(-50rem); 
 }
 
-.messageContainer.error.active {
-    transform: translate(-50rem); 
-}
-
-.messageContainer.error {
-    background-color: red;
-}
-
-
 @media only screen and (max-width: 1550px) {
 
     body {
