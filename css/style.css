@@ -724,6 +724,35 @@ button:hover::before {
     background-color: #2980b9;
 }
 
+.messageContainer {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    background: linear-gradient(to left, hsl(211, 100%, 50%), hsl(195, 100%, 50%));
+    border: 5px solid hsl(216, 100%, 50%);
+    justify-content: center;
+    border-top-width: 25px;
+    position: absolute;
+    padding-bottom: 20px;
+    border-radius: 15px;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    display: none;
+    right: -40%;
+    bottom: 0%;
+    display: flex;
+    transition: transform 0.5s ease; 
+}
+
+.messageContainer span {
+    color: hsl(0, 0%, 100%);
+    font-size: 30px;
+}
+
+.messageContainer.active {
+    transform: translate(-50rem); 
+}
+
 @media only screen and (max-width: 1550px) {
 
     body {
