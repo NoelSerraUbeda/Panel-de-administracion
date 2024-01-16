@@ -15,25 +15,9 @@ h1 {
     left: 32%;
 }
 
-h4 {
-    font-size: 2rem;
-    color: white;
-}
-
 header {
     position: relative;
     z-index: 8;
-}
-
-main button {
-    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-    transition: background-color 0.2s ease-in-out;
-    background-color: hsl(216, 100%, 50%);
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    border: none;
 }
 
 /* Encabezado */
@@ -559,6 +543,17 @@ textarea:focus {
 
 /* Botones */
 
+main button {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    transition: background-color 0.2s ease-in-out;
+    background-color: hsl(216, 100%, 50%);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+}
+
 button:hover {
     transition: transform 0.3s ease, color 0.3s ease;
     transform: scale(1.05);
@@ -678,7 +673,7 @@ button:hover::before {
     flex-wrap: wrap;
     padding: 20px;
     display: none;
-    right: -40%;
+    right: -50rem;
     bottom: 0%;
     display: flex;
     transition: transform 0.5s ease; 
@@ -690,17 +685,21 @@ button:hover::before {
 }
 
 .messageContainer.active {
-    transform: translate(-50rem); 
+    transform: translate(-51rem); 
 }
 
-.messageContainer.error.active {
-    transform: translate(-50rem); 
+span.error
+{
+    border: none;
+    font-weight: 900;
 }
 
-.messageContainer.error {
-    background-color: red;
+span.correct
+{
+    border: none;
+    color: hsl(118, 68%, 50%);
+    font-weight: 900;
 }
-
 
 @media only screen and (max-width: 1550px) {
 
