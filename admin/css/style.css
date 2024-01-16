@@ -1,6 +1,21 @@
+:root {
+    --primary-bg: hsl(195, 53%, 79%);
+    --white:white;;
+    --border: hsl(290, 100%, 20%);
+    --head-color: hsl(290, 81%, 15%);
+    --white-menu: hsl(99, 67%, 92%);
+    --light: hsl(291, 100%, 50%);
+    --dark: hsl(290, 91%, 34%);
+    --crud-card-bg: linear-gradient(to bottom, #fff, #f8eedb);
+    --error: red;
+    --correct: hsl(118, 68%, 50%);
+    --before: hsl(295, 93%, 30%);
+}
+
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: hsl(195, 53%, 79%);
+    background-color: var(--primary-bg);
     position: relative;
     overflow: hidden;
     margin: 0;
@@ -8,7 +23,7 @@ body {
 }
 
 h1 {
-    color: hsl(0, 0%, 100%);
+    color: var(--white);
     position: absolute;
     font-size: 3.5rem;
     font-weight: 900;
@@ -24,8 +39,8 @@ header {
 .topnav {
 
     position: relative;
-    border: 8px solid hsl(216, 100%, 50%)6ff;
-    background-color: hsl(240, 65%, 49%);
+    border: 8px solid var(--border)6ff;
+    background-color: var(--head-color);
     justify-content: space-between;
     align-items: center;
     border-radius: 10px;
@@ -61,7 +76,7 @@ header {
 }
 
 .bar {
-    background-color: white;
+    background-color: var(--white);
     transition: 0.8s;
     margin: 6px 0;
     height: 5px;
@@ -74,7 +89,7 @@ header {
 
 .menu-icon.active .bar:nth-child(2) {
     width: 0;
-    background-color: hsl(240, 65%, 49%);
+    background-color: var(--head-color);
 }
 
 .menu-icon.active .bar:nth-child(3) {
@@ -82,8 +97,8 @@ header {
 }
 
 .topnav-menu {
-    background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
-    border: 5px solid hsl(211, 100%, 50%);
+    background-image: linear-gradient(to bottom, var(--white), var(--white-menu));
+    border: 5px solid var(--light);
     transition: height 0.5s ease;
     border-radius: 25px;
     position: absolute;
@@ -114,8 +129,8 @@ header {
 }
 
 .topnav-menu-content-card {
-    border: 5px solid hsl(211, 100%, 50%);
-    background-color: hsl(195, 53%, 79%);
+    border: 5px solid var(--light);
+    background-color: var(--primary-bg);
     border-radius: 25px;
     margin-top: 50px;
     padding: 10px;
@@ -130,8 +145,8 @@ header {
 /* Filtrador */
 
 .topbar-filter {
-    border: 5px solid hsl(216, 100%, 50%);
-    background-color: hsl(39, 67%, 92%);
+    border: 5px solid var(--border);
+    background-color: var(--white-menu);
     transition: height 0.5s ease;
     justify-content: start;
     flex-direction: column;
@@ -249,8 +264,8 @@ header {
 
 .crud-card {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-    background-image: linear-gradient(to bottom, #fff, #f8eedb);
-    border: 5px solid hsl(216, 100%, 50%);
+    background-image: var(--crud-card-bg);
+    border: 5px solid var(--border);
     border-right-width: 8px;
     border-top-width: 10px;
     border-radius: 15px;
@@ -270,7 +285,7 @@ header {
 }
 
 .crud-card-buttons button {
-    background-color: hsl(216, 100%, 50%);
+    background-color: var(--border);
     justify-content: center;
     border-radius: 15px;
     align-items: center;
@@ -289,8 +304,8 @@ header {
 }
 
 .crud-pages {
-    background-image: linear-gradient(to bottom, #fff, #f8eedb);
-    border: 3px hsl(216, 100%, 50%) solid;
+    background-image: var(--crud-card-bg);
+    border: 3px var(--border) solid;
     justify-content: space-between;
     border-radius: 15px;
     padding-right: 40px;
@@ -307,7 +322,7 @@ header {
 }
 
 .actual-page {
-    color: hsl(216, 100%, 50%);
+    color: var(--border);
     font-weight: 900;
 }
 
@@ -315,8 +330,8 @@ header {
 
 .tabs {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-    background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
-    border: 5px solid hsl(216, 100%, 50%);
+    background-image: linear-gradient(to bottom, var(--white), var(--white-menu));
+    border: 5px solid var(--border);
     position: relative;
     border-radius: 5px;
     overflow: hidden;
@@ -333,22 +348,22 @@ header {
 }
 
 .tabs li {
-    color: hsl(216, 100%, 50%);
+    color: var(--border);
     padding: 1.2rem 1rem;
     margin-top: -20px;
     font-weight: 900;
 }
 
 .tabs li:hover {
-    background-color: hsl(207, 44%, 49%);
-    color: whitesmoke;
+    background-color: var(--before);
+    color: var(--white)smoke;
     cursor: pointer;
 }
 
 .tab.selected {
-    background-color: hsl(216, 100%, 50%);
+    background-color: var(--border);
     pointer-events: none;
-    color: white;
+    color: var(--white);
 }
 
 /* Formulario */
@@ -407,8 +422,8 @@ header {
 
 .crud-form form {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-    background: linear-gradient(to left, hsl(211, 100%, 50%), hsl(195, 100%, 50%));
-    border: 5px solid hsl(216, 100%, 50%);
+    background: linear-gradient(to left, var(--light), var(--dark));
+    border: 5px solid var(--border);
     justify-content: center;
     border-top-width: 25px;
     border-radius: 15px;
@@ -431,8 +446,8 @@ header {
 }
 
 input[type="file"] {
-    background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
-    border: 5px solid hsl(39, 67%, 92%);
+    background-image: linear-gradient(to bottom, var(--white), var(--white-menu));
+    border: 5px solid var(--white-menu);
     text-align: center;
     border-radius: 5px;
     font-size: 22px;
@@ -442,8 +457,8 @@ input[type="file"] {
 
 .image {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-    background: linear-gradient(to left, hsl(211, 100%, 50%), hsl(195, 100%, 50%));
-    border: 5px solid hsl(216, 100%, 50%);
+    background: linear-gradient(to left, var(--light), var(--dark));
+    border: 5px solid var(--border);
     border-top-width: 25px;
     border-radius: 15px;
     padding-top: 10px;
@@ -454,8 +469,8 @@ input[type="file"] {
 
 .delete-area-form {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-    background: linear-gradient(to left, hsl(211, 100%, 50%), hsl(195, 100%, 50%));
-    border: 5px solid hsl(216, 100%, 50%);
+    background: linear-gradient(to left, var(--light), var(--dark));
+    border: 5px solid var(--border);
     justify-content: center;
     border-top-width: 25px;
     padding-bottom: 20px;
@@ -470,8 +485,8 @@ input[type="file"] {
 
 .filter-menu {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-    background: linear-gradient(to left, hsl(211, 100%, 50%), hsl(195, 100%, 50%));
-    border: 5px solid hsl(216, 100%, 50%);
+    background: linear-gradient(to left, var(--light), var(--dark));
+    border: 5px solid var(--border);
     justify-content: center;
     border-top-width: 25px;
     padding-bottom: 20px;
@@ -486,8 +501,8 @@ input[type="file"] {
 }
 
 .filter-menu input {
-    background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
-    border: 5px solid hsl(39, 67%, 92%);
+    background-image: linear-gradient(to bottom, var(--white), var(--white-menu));
+    border: 5px solid var(--white-menu);
     border-radius: 15px;
     text-align: center;
     font-size: 30px;
@@ -496,8 +511,8 @@ input[type="file"] {
 
 form input,
 textarea {
-    background-image: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(39, 67%, 92%));
-    border: 5px solid hsl(39, 67%, 92%);
+    background-image: linear-gradient(to bottom, var(--white), var(--white-menu));
+    border: 5px solid var(--white-menu);
     border-radius: 15px;
     text-align: center;
     margin-top: 5px;
@@ -533,12 +548,12 @@ textarea {
 
 input:focus,
 textarea:focus {
-    border: 5px solid hsl(216, 100%, 50%);
+    border: 5px solid var(--border);
 }
 
 .error,
 .error:focus {
-    border: 5px solid red;
+    border: 5px solid var(--error);
 }
 
 /* Botones */
@@ -546,7 +561,7 @@ textarea:focus {
 main button {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
     transition: background-color 0.2s ease-in-out;
-    background-color: hsl(216, 100%, 50%);
+    background-color: var(--border);
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -560,7 +575,7 @@ button:hover {
 }
 
 main button::before {
-    background-color: hsl(207, 44%, 49%);
+    background-color: var(--before);
     transition: left 0.2s ease-in-out;
     position: absolute;
     height: 100%;
@@ -576,19 +591,19 @@ main button::before {
 }
 
 .edit::before {
-    background-color: hsl(118, 68%, 50%);
+    background-color: var(--correct);
 }
 
 .filter-input .accept::before {
-    background-color: hsl(118, 68%, 50%);
+    background-color: var(--correct);
 }
 
 .accept span {
-    color: hsl(0, 0%, 100%);
+    color: var(--white);
 }
 
 .close span {
-    color: hsl(0, 0%, 100%);
+    color: var(--white);
 }
 
 .filter-input .close::before {
@@ -642,7 +657,7 @@ button:hover::before {
     align-items: center;
     justify-content: center;
     padding: 4.5rem 0;
-    background-color: hsl(216, 100%, 50%);
+    background-color: var(--border);
     border-radius: 15px;
     font-size: 16px;
     cursor: pointer;
@@ -652,17 +667,14 @@ button:hover::before {
     cursor: pointer;
     z-index: 7;
     width: 40%;
-    fill: white;
+    fill: var(--white);
 }
 
-.custom-file-input label:hover {
-    background-color: #2980b9;
-}
 
 .messageContainer {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-    background: linear-gradient(to left, hsl(211, 100%, 50%), hsl(195, 100%, 50%));
-    border: 5px solid hsl(216, 100%, 50%);
+    background: linear-gradient(to left, var(--light), var(--dark));
+    border: 5px solid var(--border);
     justify-content: center;
     border-top-width: 25px;
     position: absolute;
@@ -680,7 +692,7 @@ button:hover::before {
 }
 
 .messageContainer span {
-    color: hsl(0, 0%, 100%);
+    color: var(--white);
     font-size: 30px;
 }
 
@@ -697,7 +709,7 @@ span.error
 span.correct
 {
     border: none;
-    color: hsl(118, 68%, 50%);
+    color: var(--correct);
     font-weight: 900;
 }
 

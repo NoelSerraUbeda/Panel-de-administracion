@@ -23,6 +23,11 @@ class Menu extends HTMLElement {
                     font: inherit;
                     border: none;
                     padding: 5px;
+                    transition: transform 0.5s ease;
+                }
+
+                .menu-icon:hover{
+                    transform:scale(1.1)
                 }
 
                 .bar {
