@@ -1,4 +1,4 @@
-import './filter.js';
+import './filter-modal.js';
 import './menu.js';
 import './modal-destroy.js';
 import './form-validation.js';

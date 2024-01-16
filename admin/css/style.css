@@ -1,6 +1,7 @@
 :root {
     --primary-bg: hsl(195, 53%, 79%);
-    --white:white;;
+    --white: white;
+    ;
     --border: hsl(290, 100%, 20%);
     --head-color: hsl(290, 81%, 15%);
     --white-menu: hsl(99, 67%, 92%);
@@ -273,6 +274,12 @@ header {
     font-size: 19px;
     margin: 10px;
     width: 700px;
+    transition: transform 0.5s ease;
+}
+
+.crud-card:hover {
+    transform: scale(1.01);
+
 }
 
 .crud-card-buttons {
@@ -388,23 +395,6 @@ header {
     margin-bottom: 10px;
     display: flex;
     gap: 30px;
-}
-
-.button-panel {
-    display: flex;
-}
-
-.topbar-form-button button {
-    margin-right: 20px;
-    cursor: pointer;
-    border: none;
-    height: 60px;
-    width: 70px;
-}
-
-.topbar-form-button button:hover {
-    transition: transform 0.3s ease, color 0.3s ease;
-    transform: scale(1.05);
 }
 
 .form-section {
@@ -546,6 +536,98 @@ textarea {
     width: 100%;
 }
 
+.custom-file-input {
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-file-input input {
+    position: absolute;
+    font-size: 100px;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.custom-file-input label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4.5rem 0;
+    background-color: var(--border);
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.custom-file-input svg {
+    z-index: 7;
+    width: 40%;
+    fill: var(--white);
+}
+
+.messageContainer {
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    background: linear-gradient(to left, var(--light), var(--dark));
+    border: 5px solid var(--border);
+    justify-content: center;
+    border-top-width: 25px;
+    position: absolute;
+    padding-bottom: 20px;
+    border-radius: 15px;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    display: none;
+    right: -50rem;
+    bottom: 0%;
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.messageContainer span {
+    color: var(--white);
+    font-size: 30px;
+}
+
+.messageContainer.active {
+    transform: translate(-51rem);
+}
+
+span.error {
+    border: none;
+    font-weight: 900;
+}
+
+span.correct {
+    border: none;
+    color: var(--correct);
+    font-weight: 900;
+}
+
+/* Botones */
+
+.button-panel {
+    display: flex;
+}
+
+.topbar-form-button button {
+    margin-right: 20px;
+    cursor: pointer;
+    border: none;
+    height: 60px;
+    width: 70px;
+}
+
+.topbar-form-button button:hover {
+    transition: transform 0.3s ease, color 0.3s ease;
+    transform: scale(1.05);
+}
+
 input:focus,
 textarea:focus {
     border: 5px solid var(--border);
@@ -555,8 +637,6 @@ textarea:focus {
 .error:focus {
     border: 5px solid var(--error);
 }
-
-/* Botones */
 
 main button {
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
@@ -612,83 +692,6 @@ main button::before {
 
 button:hover::before {
     left: 0;
-}
-
-
-.custom-file-input {
-    position: relative;
-    overflow: hidden;
-}
-
-.custom-file-input input {
-    position: absolute;
-    font-size: 100px;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0;
-}
-
-.custom-file-input label {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4.5rem 0;
-    background-color: var(--border);
-    border-radius: 15px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.custom-file-input svg {
-    z-index: 7;
-    width: 40%;
-    fill: var(--white);
-}
-
-
-.messageContainer {
-    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-    background: linear-gradient(to left, var(--light), var(--dark));
-    border: 5px solid var(--border);
-    justify-content: center;
-    border-top-width: 25px;
-    position: absolute;
-    padding-bottom: 20px;
-    border-radius: 15px;
-    align-items: center;
-    margin-top: 20px;
-    flex-wrap: wrap;
-    padding: 20px;
-    display: none;
-    right: -50rem;
-    bottom: 0%;
-    display: flex;
-    transition: transform 0.5s ease; 
-}
-
-.messageContainer span {
-    color: var(--white);
-    font-size: 30px;
-}
-
-.messageContainer.active {
-    transform: translate(-51rem); 
-}
-
-span.error
-{
-    border: none;
-    font-weight: 900;
-}
-
-span.correct
-{
-    border: none;
-    color: var(--correct);
-    font-weight: 900;
 }
 
 @media only screen and (max-width: 1550px) {

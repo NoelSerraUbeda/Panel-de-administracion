@@ -7,32 +7,33 @@ class Users extends HTMLElement {
     connectedCallback() {
         this.render()
     }
+
     render() {
         
         this.shadow.innerHTML =
         /*html*/`
 
         <style>
-        h4 {
-            font-size: 2rem;
-            color: white;
-            margin-right:15px;
-        }
-        .topnav-users {
-            display: flex;
-            width: 30rem;
-            gap: 15px;
-        }
+            h4 {
+                font-size: 2rem;
+                color: white;
+                margin-right:15px;
+            }
+            .topnav-users {
+                display: flex;
+                width: 30rem;
+                gap: 15px;
+            }
 
-        .topnav-users svg {
-            width:4rem;
-        }
+            .topnav-users svg {
+                width:4rem;
+            }
 
-        .topnav-users svg:first-child {
-            width:6rem;
-            transform: translateY(0px);
-            margin-right:2.5rem;
-        }
+            .topnav-users svg:first-child {
+                width:6rem;
+                transform: translateY(0px);
+                margin-right:2.5rem;
+            }
         
         </style>
   
